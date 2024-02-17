@@ -1,0 +1,112 @@
+Office Hours Topics:
+
+    reviewing week 11:
+    static
+    access modifier
+    encapsulation
+    inheritance intro
+
+----------------------------------------------------------------------------------------
+
+Country [static, instance, class, object]
+
+    Create a class Country
+    define these static variables:
+        planet - Earth
+        world population - 7.88 billion - represent billions
+        world co2 level - 417.83 - represents the unit is ppm (parts per million)
+
+    define these instance variables:
+         name, population, continent
+
+    create a static block to initialize the static variables
+
+    create a constructor to initialize the instance variables
+
+    create a different class to test the Country objects and static variables
+
+----------------------------------------------------------------------------------------
+
+Workout [Encapsulation, access modifiers, classes, objects, methods]
+
+    Create a class Workout
+    define and encapsulate these instance variables:
+        name, duration, calories burned
+
+    create a constructor to initialize the variables. Call the setters in the constructor
+
+    in the setters only set the values if they are valid data based on these requirements:
+        name: should have only letters and spaces, no other characters type. The name cannot be empty either
+
+        duration: should be more than 0
+
+        calories burned: should be more than 0 and less than 1000
+
+    create another class to test the Workout objects
+
+----------------------------------------------------------------------------------------
+
+FlightTicket [Encapsulation, access modifiers, classes, objects, methods, LocalDateTime]
+
+    create a class FlightTicket
+
+    define these instance variables:
+        type (String), departure date/time (LocalDateTime), departure location, arrival location
+
+    encapsulate the variables
+        in the setters:
+            type - can only be first, business, or economy
+            arrival location - arrival cannot be the same location as the departure
+
+    create these constructors and chain them to avoid repetition
+        - create a constructor that initializes all the variables
+            -> call setters methods
+
+    create a toString() to print all the Ticket information
+
+----------------------------------------------------------------------------------------
+
+Books [Inheritance]
+
+    Create a class Book
+
+    instance variables:
+        - title (String)
+        - author (String)
+        - genre (String)
+        - chapters (int)
+        - number of pages (int)
+        - has a movie (boolean)
+
+        create a read method
+
+    - Create a class EBook, a sub class of Book
+        define more instance variables:
+            - size (double) (mb)
+            - on kindle (boolean)
+
+        create a open method
+
+    - Create a class AudioBook, a sub class of Book
+        define more instance variables:
+            - narrator (String)
+            - duration (double)
+
+        create a listen method
+
+----------------------------------------------------------------------------------------
+
+Fibonacci [IQ][problem-solving, array, loop]
+
+    the Fibonacci sequence is a sequence of numbers that are built by calculating the sum of the previous two numbers
+    the sequence always starts with 0 and 1 and to calculate the rest of the sequence the previous two numbers are added together
+    for example: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+        0 + 1 -> 1
+        1 + 1 -> 2
+        1 + 2 -> 3
+        2 + 3 -> 5
+        etc
+
+    create an array, with size n, with the elements being the Fibonacci sequence
+    if n is 10 then give 10 numbers of the sequence
+    if n is 20 then given 20 numbers of the sequence

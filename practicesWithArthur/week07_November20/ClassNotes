@@ -1,0 +1,86 @@
+
+                ---Avengers Week07 (November 20th 2023)---
+
+--What is Avengers sessions and who should join  ?
+        Avengers sessions are additional hours will be in a very relaxed pace.If you understand the regular topics,
+        and if you are able to solve the practices we do not suggest you to join to this session. However, if you
+        feel like you need help when you are practicing solo even after you joined to live classes and the office
+        hours, this session is here to help you to guide through some additional practices in a slow but steady pace.
+
+-- Is any preparation required before the sessions?
+        I will share the practice program for each week in the "arthur_only" channel on Discord couple of days before
+         the sessions. To make our sessions more productive, I encourage you to review the week's Codingbat practices
+          before our session.
+
+--What is the appropriate behavior expected during class?
+        -First of all follow the class carefully
+        -If you would like to catch the important point of topic just listen, do not try to write codes yourself
+        -I will share all codes in GitHub
+        -If you would like to write your codes simultaneously with your instructor  while listening you can try
+        both watch the recordings of these classes and write your own codes together. If you succeed that you can
+        do the same during the classes. If you can not do not worry that is absolutely normal just take small notes
+        -During the class if you have any question note that and wait for your question, if you try to type your
+        question while I am telling maybe you can miss the point of topic
+        -I will answer all questions. If our class time is not enough for all question , I will give you extra time.
+        -If you have an error, do not panic, just read the ERRORS from Console
+
+--Duration: 3 hours
+--Topics:
+        Codingbat Logic1
+            cigarParty H-----> If statement, Boolean, Logical Operators (&&, ||, !)
+            dateFashion H----> If statement, Logical Operator ||
+            squirrelPlay-----> If statement, Logical Operator &&
+            caughtSpeeding---> Ternaries, If statement, Logical Operator ||
+            sortaSum---------> If statement, Logical Operator &&
+
+
+
+
+-- To test/run any of the methods in IntelliJ you need to:
+       -First create a main method
+       -Then copy your codes from codingbat to IntelliJ
+       -Then make the custom method static
+       -And then call the your custom method inside main method and give appropriate arguments
+
+
+--If Statements: used for conditional statements. if the condition true, the block gets executed
+
+    Single if: for one condition
+
+        if(Condition){
+            StatementA
+        }
+
+    If & else: when there are only two option/possibilities ( not more not less than 2 condition)
+
+
+        if(Condition){
+            StatementA
+        }else{ // otherwise
+            StatementB
+        }
+
+        StatementA: if condition MUST be true
+        StatementB: if condition MUST be false
+
+    Multi-branch if: when there are three or more options/possibilities
+
+        if(Condition1){
+            StatementA
+        }else if(Condition2){
+            StatementB
+        }else{
+            StatementC
+        }
+
+        ONLY one block gets executed
+
+        StatementA: Condition1 MUST be true
+        StatementB: Condition1 MUST be false, Condition2 MUST be true
+        StatementC: Condition1 & Condition2 MUST be false
+
+--Ternaries: shortcut of if statement
+
+    if:        (Condition)?
+    else:                 :
+    else if:   :(Condition)?

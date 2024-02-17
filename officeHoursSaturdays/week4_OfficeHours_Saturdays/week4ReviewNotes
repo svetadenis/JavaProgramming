@@ -1,0 +1,172 @@
+11/4/2023
+
+Week 4
+Day08 - Ternaries, Switch Statement Intro
+Day09 - Switch Statement Continue, Scanner Intro
+Day10 - Scanner Continue, String Intro
+__________________________________________________________________
+
+ternary
+switch
+package & import
+Scanner
+String
+
+Next week
+	2 java
+	1 soft skills
+	BUT the review is on SUNDAY
+__________________________________________________________________
+
+switch
+
+Conditional statement: controlling the flow of execution
+
+	switch statements compares only exact values
+		==
+		relational operations > < are not allow in switch
+
+	switch(input value){
+		case x:
+			// statements
+			break;
+	}
+
+	switch: keyword that is used to create switch statements
+
+	input value: value that is checked in the switch
+		can only be: byte, short, int, String, char
+		what is not allowed: boolean, float, double, long
+
+	case: value that you are looking for
+		Ex: if the input value was num an int variable the case could be:
+			case 5:  <--> if(num == 5)
+			case 6:  <--> if(num == 6)
+
+		case should match the same datatype as the input value
+		cases should be unique
+
+	statements: any code that should run when a case matches
+
+	break: stops and exits the switch statement
+
+	default: the case that gets executed if no other case matches
+
+Flow of execution
+
+	if: check one boolean at a time, if it true run the that block, but if its false check the next condition
+
+	switch: matches the case right away then runs the statements defined from that point until the end of the switch statement
+		Note: we use break to also stop the switch
+
+Benefit: more readable, compact, easy to maintain, in general can be quicker in execution than if statement
+
+else: code block that runs when all other boolean in the if statements was false
+default: the case the runs when no other case matches
+
+__________________________________________________________________
+
+ternary
+
+	different way to write an if statement
+
+	returnValue = boolean_expression ? trueValue : falseValue;
+
+		? if
+		: else
+__________________________________________________________________
+
+DRY: Don't Repeat Yourself
+
+If statement vs Switch vs Ternary
+
+	in most cases you will use if statements
+	any switch or ternary can always be converted to an if statement
+	If statements allow more flexibility by using single if, if else, multi branch, or nested
+
+	Switch is useful to compare the exact value, so it is a good choice when all the possible values are known (they will be the cases)
+	Downsides: only compare values, no boolean logic, and the datatypes that can be compared are a little restrictive
+
+	Ternary useful sometimes to make a quick single if statement in one line
+	Can only be used when a value is returned, and you need to at least define two possible outputs
+__________________________________________________________________
+
+package & import
+
+	imports allow us to use class/files that are in different packages
+
+	order of a java file:
+		-> imports go between the package and class
+			PIC: package, import, class
+
+	the java.lang package is automatically imported
+		String, System
+
+	import packageName.className
+	import java.util.Scanner;
+
+	import packageName.*; // allows you to use all of the class in that package
+		* -> wildcard -> all classes
+	import java.util.*;
+
+	IntelliJ settings to auto import
+		file -> settings -> Editor -> general -> auto import
+		select 	add unambitious imports on the fly
+				optimize imports on the fly
+__________________________________________________________________
+
+Scanner
+
+	Scanner is a CLASS that has some METHODS that allow us to read information from the console
+
+	class is a java file
+	method are a block of code
+
+	why to use Scanner
+		to avoid hard coding
+			hard coding: the value is fixed in the code
+
+	how to use Scanner:
+
+		1) import the class
+			Scanner is a class in the java.util package so we can import it from there to use it
+				import java.util.Scanner;
+
+		2) 	creating the Scanner object(variable)
+			In order to use the method (actions) from the Scanner class we need to make an object first (think of it as a variable for now)
+				Scanner input = new Scanner(System.in);
+
+		3) use methods with our object
+			to use the actions that are defined we can use Scanner methods with the object we made (step 2)
+				general syntax: nameOfScanner.method()
+
+	next(): reads a single word
+	nextLine(): reads multiple words
+		accepts the enter input
+		note: causes a problem when used after the other Scanner methods
+
+__________________________________________________________________
+
+String
+
+	String is a class, so it defines some methods. They represent sequence of characters.
+	non primitive type - object type
+
+	class is defined in the java.lang package
+
+	2 ways to create String object
+
+		* literal: creating with double quotations
+			""
+		* new: new String("");
+
+	stack: variable name (reference)
+	heap: where objects are stored
+		-> String pool: part of the heap, it holds the String literals
+
+	Strings are immutable
+		the object cannot be changed after creation
+
+	Strings have indexes:
+		position of each character in the String
+		index numbers start from 0

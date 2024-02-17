@@ -1,0 +1,188 @@
+12/16/2023
+
+Week 10
+Day24 - ArrayList Continue, Data & Time Intro
+Day25 - Data & Time Continue, Constructors Intro
+Day26 - Constructors Continue, Statics Intro
+__________________________________________________________________
+
+ArrayList
+Collections
+removeIf()
+Date & Time classes
+DateTimeFormatter
+Constructor Intro
+Static
+__________________________________________________________________
+
+Bulk operations
+    the arguments of these methods are collection types
+
+    addAll ( collection type ): adds all the elements from the parameter list to our ArrayList
+
+    removeAll( collection type ): removes every occurrence of every element from our parameter list
+
+    containsAll( collection type ): checks if the ArrayList contains every element from the collection type parameter. returns boolean
+
+    retainAll(collection type): keep all matching elements from the argument. The rest are removed
+
+__________________________________________________________________
+
+Collections
+
+    This class is a utility for collections
+        located in the java.util package
+
+        ArrayList is a collection, so we can use these methods with ArrayList
+
+    Methods
+        Collections.sort(collection type): sort the given collection
+            void method
+
+        Collections.reverse(collection type): reverse the order of the elements in given collection
+            void method
+
+        Collections.max(collection type): returns the biggest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.min(collection type): returns the smallest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.swap(collection type, index1, index2): swap the elements in the collection based on the defined indices. The element in index1 is put into the index2 and vice versa
+            void method
+
+		Collections.frequency(collection, element): returns the number of times the given element is found in the collection
+			returns int
+
+__________________________________________________________________
+
+removeIf(): method that can remove elements based on a lambda expression
+
+    removeIf( lambda )
+
+        basic lambda for this method (based on our current understanding)
+            variable -> boolean(using the variable)
+
+            -> the given boolean statement will be evaluated with each element. If the result is true the element will be removed
+
+    // keep the odd numbers
+    removeIf(p -> p % 2 == 0);
+
+    // remove all the names that have the letter m
+    removeIf(name -> name.contains(m));
+
+__________________________________________________________________
+
+Date & Time classes
+
+	LocalDate: A class that can represent a date with years, months, and days values
+
+	LocalTime: A class that can represent a time with hours, minutes, and seconds values
+		-> uses 24 hour format
+
+	LocalDateTime: A class the can represent both date and time values
+
+	* These objects are immutable
+
+	a few of the methods: - for all check documentation
+		.now()
+		.of() // year, month, day || time: hours, minutes, seconds || DateTime: LocalDate,LocalTime or years, months, days, hour minutes
+
+	getDayOfWeek(), getDayOfYear(), getMonth, getMinute(), isBefore(), isAfter(), minusDays, plusDays(), plusYears(), minusYears(), parse(), etc
+
+__________________________________________________________________
+
+DateTimeFormatter
+
+	A class that provides the ability to format LocalDate, LocalTime, and LocalDateTime objects
+
+	To format any of the object a DateTimeFromtter object is created
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("pattern here");
+
+	to format the Date/Time object is given as the argument in the format() method
+		formatter.format();
+
+	Patterns
+		Years:
+			yy: 2 digit year number
+			yyyy: 4 digit year number
+
+		Months:
+			M: month number (from 1-12) – doesn't include 0 for number of 0-9
+			MM: month number (from 1-12) – includes 0 for number of 0-9
+			MMM: month abbreviation (Ex: Jan, Dec, etc)
+			MMMM: full month name (Ex: January, December, etc)
+
+		Days:
+			d: single digit day number
+			dd: double digit day number, includes 0 if it is a digit from 0-9
+
+		Hours:
+			h: hour format for am or pm in 1-12 – doesn't include 0 for number of 0-9
+			hh: hour format for am or pm in 1-12 – includes 0 for number of 0-9
+			HH: hour format for 24-hour format – doesn't include 0 for number of 0-9
+			HH: hour format for 24-hour format – includes 0 for number of 0-9
+
+		Minutes:
+			m: minute format – doesn't include 0 for number of 0-9
+			mm: minute format – includes 0 for number of 0-9
+
+		Seconds:
+			s: second format – doesn't include 0 for number of 0-9
+			ss: second format – includes 0 for number of 0-9
+
+		AM or PM
+			a: adding this to the format will put AM or PM based on the time
+
+__________________________________________________________________
+
+Constructor
+
+    a constructor is a special kind of method that is called when new keyword is used, so the code in the constructor is executed whenever an object of that class is created
+
+    constructors are often used to initialize instance variables and run any other code that would set the object up
+
+    if no constructor is made by you a default constrictor will always be given by the compiler. It will be a no argument constructor
+    	-> more about this later
+
+    the constructor uses the same name as the class and does not have a return type
+
+__________________________________________________________________
+
+Constructor chaining
+
+    constructor calling another constructor
+
+    constructors can be overloaded by changing the parameters
+
+    using this(): call one of the overloaded constructors to avoid repeating code
+        rules:
+        the constructor call must be on the first line with valid arguements
+        the constructor should not call or contain themselves at any point
+
+this vs this()
+    this: used to reference the current class objects
+    this(): used to call a different constructor in the same class
+__________________________________________________________________
+
+static
+
+    keyword that allows us to define members that belong to the class
+        opposite of instance which are members that belong to the object
+
+    biggest difference between instance & static is how to use the members:
+
+        instance members:
+            create an object first, then use
+
+        static members:
+            give the class name to use
+
+static members:
+
+    static variable: a variable that belongs to the class, so there is a single copy it
+       every object has a copy of the instance variables
+
+    static method: a block of code that can be called without an object
+        -> used in utility classes
+            these class have useful methods, and because they are static we can call them by the class name

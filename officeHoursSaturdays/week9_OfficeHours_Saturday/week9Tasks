@@ -1,0 +1,86 @@
+Practice Tasks
+
+	------------------------------------------------------------------------
+
+CustomPrint [multidimensional, loop, String, method]
+
+     Create a method that will accept a 2D int array and return a String format of the array. Make your own custom print format for this 2D array instead of using the deepToString() method
+
+     Ex:    this is just an example. You can be creative for how the 2D array will be printed
+       int [][] nums = {
+                {3, 4, 5, 6},
+                {5, 2, 6},
+                {10, 40, 20}
+        };
+
+        output:
+            index 0 | (3)(4)(5)(6)
+            index 1 | (5)(2)(6)
+            index 3 | (10)(40)(20)
+
+    ------------------------------------------------------------------------
+
+AverageEach [multidimensional, loop]
+
+    Create a program that will define a 2D int array with some numbers. Go through and calculate the average of each inner array and the average of the whole 2D array
+
+    Ex:
+       int [][] nums = {
+                {3, 4, 5, 6},
+                {5, 2, 6},
+                {10, 40, 20}
+        };
+
+        output:
+            average of: [3, 4, 5, 6] is 4.5
+            average of: [5, 2, 6] is 4.33
+            average of: [10, 40, 20] is 23.33
+            average of all is 10.1
+
+    ------------------------------------------------------------------------
+
+GoogleSearch [Wrapper class, String, testing/automation idea]
+
+    Create a program that will define a String that is given in a fixed format based on how google search results are displayed.
+
+    format: About 3,940,000,000 results (0.39 seconds)
+
+    Scenario: check if your search results are under 100 Million
+        if the results are under print: Good Search
+        if the results are over print: Narrow your search, too many results
+
+    AC: User should be able to search in google and get results back in under 0.85 seconds or less
+    Test Case:
+        Given user opens the browser and navigates to google.com
+        Then searches for {data}
+        Verify if the time is less than or equal to 0.85 seconds
+
+            > check the number of seconds it took for the results to see if the functionality is working properly
+    ------------------------------------------------------------------------
+
+ProfitCalculator [Wrapper class, ArrayList, loop, Collections]
+
+        ArrayList<Double> lastYear = new ArrayList<>(Arrays.asList(30.67, 16.34, 10.93, 5.01, 12.97, 11.73, 22.35, 33.9, 68.35));
+        ArrayList<Double> currentYear = new ArrayList<>(Arrays.asList(32.24, 15.9, 11.57, 9.14, 10.42, 21.56, 14.16, 42.49, 54.5));
+
+    You are giving two ArrayList of Double values that represent the profits from last year and the current year. Each position (index) between the two ArrayList are related, so index 0 are the profits from one department. For example in our data the 30.67 and 32.24 were the profits from one department but over the last year and current year.
+    Calculate the different in profits over these two years and store them into a new ArrayList
+        for example the first difference would be 32.24 and 30.67
+    Format and parse the value to only be 2 decimal points
+
+    Then find the following:
+        - what the biggest profit was
+        - what the biggest lost was
+        - the average profit
+
+    ------------------------------------------------------------------------
+
+SumDigits [Wrapper class, ArrayList, loop]
+
+    Create a program that will define an ArrayList of String. The elements in this ArrayList will be number digits like: "123". Calculate the sum of the digits and store them into a new ArrayList of Integers. Print all the sums of the digits at the end.
+
+        Ex:
+            Input:
+            ["123, "52", "513"]
+            Output:
+            [6, 7, 9]

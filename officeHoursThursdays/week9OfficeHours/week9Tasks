@@ -1,0 +1,130 @@
+Office Hours Topics:
+
+    reviewing week 8:
+    class & objects
+    memory management
+    array
+
+----------------------------------------------------------------------------------------
+
+T1Recipe [object type]
+
+    Create a class called Recipe
+    declare these instance variables:
+        name, ingredients, serving size, cost
+
+    create a setInfo() method to initialize these variables
+
+    create a method called costPerPerson that will return a double. Calculate the amount each person would need to pay to make this recipe - use the serving size and cost values
+
+    create a toString() that shows the information in the following format:
+        Recipe for $name will require these ingredients:
+                $all_ingredients
+        This dish will serve $serving_size and cost a total of $ $cost to make
+
+    create a class called ObjectTester and create some Recipe objects
+
+----------------------------------------------------------------------------------------
+
+T2AnimalSpecies [object type]
+
+    Create a class called AnimalSpecies
+    declare these instance variables:
+        name, population (double), growth rate (double)
+        -> where the unit for the population is 1 million. Ex: 20 population would represent 20 million
+        -> where the growth rate is a number percentage. Ex: 2.5 growth rate would be 2.5%
+
+    create a setInfo() method to initialize these variables
+
+    create a method called calculateInYears that will accept an int year parameter and return the population estimate. Calculate the estimate of what the population will be in the given years based on the growth rate
+
+    create a toString() that shows the information in the following format:
+        The $name currently has a population of $population million
+        The growth rate is sitting around $rate %, so we predict the population in 5 years will be: $5_year_estimate
+
+    use the ObjectTester class and create some AnimalSpecies objects
+
+----------------------------------------------------------------------------------------
+
+T3 Analysis the code to determine which parts are in the stack & heap memory
+
+    public class Test {
+
+        int z;
+
+        public static void add(int a, int b){
+            System.out.println(a + b);
+        }
+
+        public static void main(String [] args) {
+            add(5, 3);
+
+            Test obj = new Test();
+            obj.z = 10;
+
+            int y = 1;
+            obj.z = y;
+
+            Test obj2 = new Test();
+            obj2.z = 4;
+
+            String s = "java";
+
+            if(y == 1){
+                String s2 = new String("java");
+            }
+
+        }
+
+    }
+
+    STACK           HEAP
+
+    main
+       obj      -> new Test()
+       y = 1          z = 1
+       obj2     -> new Test()
+                      z = 4
+
+                   { String pool }
+        s            "java"
+
+                 {not in String pool}
+        s2            "java"
+
+----------------------------------------------------------------------------------------
+
+T4ShiftLeft [array, loop]
+
+    Create a program that will define an int array with any number of elements. Print out the array with all the elements shifted one position to the left. The first element would be moved to the end
+
+    Create a program that will define an int array with any number of elements. Print out the array with all the elements shifted one position to the left. The first element would be moved to the end
+
+    Ex:
+        {1, 2, 3} -> [2, 3, 1]
+        {17, 14, 5, 10} -> [14, 5, 10, 17]
+        {7, 0, 1} -> [0, 1, 7]
+
+----------------------------------------------------------------------------------------
+
+T5BeginningEnd [array, loop, String]
+
+    Create a program that will define a String array with some name values. Determine how many of the names begin with and end with the same character.
+
+    Ex:
+        {Anna, Mike, Aliya, Remus, Gina, Hannah, Nathan, Otto, Kevin, Kelly}
+
+        -> 5
+
+    Bonus challenge: Collect all the names into a String
+
+----------------------------------------------------------------------------------------
+
+T6ReverseEach [array, loop, String]
+
+    Create a program that will define a String array with some words. Reverse each given element and assign them to a new array for all the reverse words
+
+    Ex:
+        {can, you, join, the, team} -> [nac, uoy, nioj, eht, meat]
+
+----------------------------------------------------------------------------------------

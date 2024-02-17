@@ -1,0 +1,176 @@
+12/9/2023
+
+Week 9
+Day21 - Multi Dimensional Array
+Day22 - Wrapper Classes, ArrayList Intro
+Day23 - ArrayList Continue
+__________________________________________________________________
+
+multidimensional array
+wrapper class
+ArrayList
+__________________________________________________________________
+
+multidimensional array
+
+    An array that holds other arrays. The element of a 2D, multidimensional array, is a single array
+
+        single array
+                int [] a = { 1, 2, 3};
+
+        2D array
+
+                int [][] arr = {
+                        {1, 2, 3},
+                        {4, 5, 6}
+                }
+
+                arr[1] -> {4, 5, 6}
+                arr[1] = { 10, 30 10};
+
+                        To access the elements we will still use indexes. In this case the elements are other arrays
+
+        Print the multidimensional arrays:
+                Arrays.deepToString(arr);
+
+declaring 2D array
+
+    dataType [][] arrayName = new dataType[x][z];
+
+        where x is how many elements the 2D array has - number of arrays
+
+        where z is the size of each inner array
+            -> is optional to define. If it is not defined then the inner array sizes' do not matter. they can be different
+
+        int[][] nums = new int[4][2] -> 4 1D arrays which have a size of 2
+        int[][] nums = new int[4][] -> 4 1D arrays but the size of each inner array is not fixed.
+
+    datatType [][] arrayName = {arrayName1, arrayName2, etc}
+
+    dataType [][] arrayName = {
+        {element, element, element, etc},
+        {element, element, element, etc},
+        {element, element, element, etc}
+    };
+
+__________________________________________________________________
+
+wrapper class
+
+    object representation of primitive datatypes
+
+    Wrapper classes are defined in the java.lang package
+
+    primitive -> Wrapper classes
+        byte -> Byte
+        short -> Short
+        int -> Integer
+        long -> Long
+        float -> Float
+        double -> Double
+        char -> Character
+        boolean -> Boolean
+
+Why do we need it?
+
+    1) ArrayList and other collection types DO NOT WORK with primitive types
+        -> array objects work with both primitive and object types (non-primitive)
+
+    2) Wrapper classes have useful methods & information
+        Ex: parse methods, MAX_VALUE
+
+How to make wrapper class object * no need to use the new keyword
+    className varName = value;
+
+Converting types * Both are automatic
+
+    Autoboxing: converts the primitive datatype to the wrapper class object
+
+    Unboxing: converts the wrapper class object to the primitive datatype
+
+What is the different between parse method and valueOf methods
+
+    parse methods return the primitive datatype
+        Ex: parseInt(), parseDouble()
+
+    valueOf methods return the wrapper class objects
+        Ex: Integer.valueOf(), Double.valueOf(), String.valueOf()
+
+__________________________________________________________________
+
+ArrayList
+
+    ArrayList is a class. It is part of the collection framework (we will study later)
+
+    ArrayList is a data structure that is Array based meaning it internal uses Arrays
+
+    allow duplicates, has indexes, are order is maintained (we will also understand the importance of this later)
+        the size is flexible
+        able to be printed normally
+        only works with Object types, so primitives do not work
+
+When to use ArrayList vs Array
+
+    ArrayList:
+        - dynamic size
+        - allows manipulation of data: adding, removing, checking for elements
+        - only object types
+
+    Array:
+        - takes less memory
+        - good for reading fixed sets of data
+        - works for both primitive and object types
+
+__________________________________________________________________
+
+Creating ArrayList
+
+	new ArrayList() -> empty ArrayList
+	new ArrayList(other list) -> new ArrayList with values from the given list
+
+	Convert Array to ArrayList
+        Using the Arrays utility class
+
+        Arrays.asList(arr) method -> give you an ArrayList
+        	-> actually gives a collection type, but we will learn this later on
+
+	ArrayList<type> name = new ArrayList<>( Arrays.asList() );
+
+__________________________________________________________________
+
+Bulk operations
+    the arguments of these methods are collection types
+
+    addAll( collection type ): adds all the elements from the parameter list to our ArrayList
+
+    removeAll( collection type ): removes every occurrence of every element from our parameter list
+
+    containsAll( collection type ): checks if the ArrayList contains every element from the collection type parameter. returns boolean
+
+    retainAll(collection type): keep all matching elements from the argument. The rest are removed
+
+__________________________________________________________________
+
+Collections
+
+    This class is a utility for collections
+        located in the java.util package
+
+        ArrayList is a collection, so we can use these methods with ArrayList
+
+    Methods
+
+        Collections.sort(collection type): sort the given collection
+            void method
+
+        Collections.reverse(collection type): reverse the order of the elements in given collection
+            void method
+
+        Collections.max(collection type): returns the biggest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.min(collection type): returns the smallest elements in the collection
+            returns element datatype (Integer, Double, etc)
+
+        Collections.swap(collection type, index1, index2): swap the elements in the collection based on the defined indices. The element in index1 is put into the index2 and vice versa
+            void method

@@ -1,0 +1,123 @@
+Office Hours Topics:
+
+reviewing week 9:
+multidimensional array
+wrapper classes
+ArrayList
+
+----------------------------------------------------------------------------------------
+
+T1MultiplyMatrix [multidimensional array]
+
+Create a program that will take two given 2D int array that have the same number of elements and multiply the matrices together. Each number is multiplied with each other number in the same position
+Print the result as a separate 2D array
+
+    Ex: array 1                 array 2
+     [[1, 2, 3], [5, 2, 1]] * [[25, 3, 5], [0, 1, 19]]
+     result:
+        [[25, 6, 15], [0, 2, 19]]
+
+----------------------------------------------------------------------------------------
+
+T2HtmlGenerator [String, wrapper class, loop, array]
+
+Create a program that will read the request for the HTML that will be generated. Each request will be made of the tags and how many times that tag should be repeated. Each separate HTML tag will be separated by a semi-colon;
+
+Tags should be surrounded in diamond brackets and each closing tag has a / too
+
+Note: we are not creating a fully valid HTML structure. It is just a task
+
+    Ex:
+        Input:
+            div2;li1
+
+        Output:
+            <div> </div>
+            <div> </div>
+            <li> </li>
+
+    Ex:
+        Input:
+            ul1;li3;button2
+
+        Output:
+            <ul> </ul>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <button> </button>
+            <button> </button>
+
+----------------------------------------------------------------------------------------
+
+T3RedactFile [ArrayList, array, loop, String]
+
+create a program that will define important text in a file (just a String). Then define an ArrayList of the words that need to be redacted or hidden. Go through each word of the file and hide the words that were given.
+
+for example, if file has the word "hello" and that is one of the words that should be hidden you can replace that word with "-----"
+
+sample data:
+text = "Agent Shadow, a seasoned operative with a reputation for discretion, embarked on a mission to dismantle an international syndicate threatening global security. Intelligence suggested that the syndicate, codenamed Silhouette was orchestrating a series of cyber-attacks to gain control of sensitive government databases. Posing as a wealthy entrepreneur, Agent Shadow infiltrated a high-profile gala where Silhouette's enigmatic leader, known only as Ghost, was rumored to make an appearance. Disguised in a sleek tuxedo, Agent Shadow discreetly mingled with the elite attendees, extracting valuable information about the syndicate's next move. As the night unfolded, Agent Shadow intercepted encrypted messages hinting at a secret meeting location. Employing her skills in cryptography, she deciphered the coordinates pointing to an abandoned warehouse on the outskirts of the city. The warehouse, it seemed, served as Silhouette's operational base. Under the cover of darkness, Agent Shadow infiltrated the warehouse, discovering advanced surveillance equipment and a command center for the cyber-attacks. In a hidden chamber, she stumbled upon a dossier containing the names of compromised agents within various intelligence agencies. With the gathered evidence, Agent Shadow transmitted a secure report to headquarters, exposing Silhouette's plans and outlining a strategy for a coordinated takedown. The race against time had begun, as global security hung in the balance, and Agent Shadow prepared for the final confrontation with the elusive Ghost."
+
+hide = "Shadow", "dismantle", "syndicate", "Silhouette", "Ghost", "warehouse", "darkness", "cyber-attacks"
+
+----------------------------------------------------------------------------------------
+
+T4StarWarsFactions [ArrayList, String, Loop]
+
+Create a program that defines an ArrayList with names. Go through the names and separate them into separate ArrayLists based on the faction they belong to. Print all the factions at the end
+
+The factions can be determined by key titles in the names
+ignore case sensitivity
+
+titles - & - related factions
+
+jedi - jedi order
+imperial, trooper, or officer - galactic empire
+rebel, or alliance - rebel alliance
+
+Sample data: Add more data if you want - note: these are just names with a title in them
+
+"Jedi Yoda", "officer Versio", "officer Brunson", "Trooper Needa", "Jedi Windu", "Jedi Skywalker", "Princess Leia Rebel", "Rebel Sabine", "Rey Jedi", "Rook Alliance", "imperial Terex"
+
+----------------------------------------------------------------------------------------
+
+T5WeatherReport [ArrayList, loop, operators]
+
+Create a program that will define an ArrayList of recent temperatures. There is always extreme temperatures so to get a better reading of the data remove the highest 2 and lowest 2 temperatures. Then give the following information based on the temperature:
+
+max temperature, min temperature, median (middle temperature), mean (average temperature)
+
+lso, give a prediction temperature range for the next few days by using the average and both adding and subtracting 5 to create the range. The values for this predication can be whole numbers
+
+we can assume the amount of data will always be an odd number so there will be one median
+
+    Ex:
+    input:
+    62.1, 68.9, 55.4, 44.8, 77.3, 43.0, 53.4, 47.1, 55.8, 42.3, 48.5
+
+    // excluded: 42.3, 43.0, 68.9, 77.3
+    // data sample: 44.8, 47.1, 48.5, 53.4, 55.4, 55.8, 62.1
+
+    output:
+    max: 62.1
+    min: 44.8
+    median: 53.4
+    mean: 52.44
+    predication: 47 - 57
+
+----------------------------------------------------------------------------------------
+
+Main difference between Arrays and Arraylist (Most popular question)
+- fixed size or flexible
+- Arraylist can only hold Object Types, can not contain primitives
+- Arrays can hold both pri and obj type
+
+- Nth dimensional array holds  (n-1) dimensional arrays
+
+
+----------------
+Data Structures in Java:
+    - Array
+    - Arraylist -- part of Collections (Set, List, LinkedList, Queue, Vector etc...)
+    - Map data structure

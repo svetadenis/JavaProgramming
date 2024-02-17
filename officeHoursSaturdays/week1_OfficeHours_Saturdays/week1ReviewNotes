@@ -1,0 +1,329 @@
+10/14/2023
+
+Week 1
+Day01 - Intro To Programming
+Day02 - Escape Sequences, Comments
+__________________________________________________________________
+
+introduction
+overview of programming
+java
+IntelliJ
+main method
+print statements
+escape sequences
+
+CYDEO AI
+__________________________________________________________________
+
+Shortcuts
+
+	copy: command/control + c
+	paste: command/control + v
+	cut: command/control + x
+	undo: command/control + z
+	save: command/control + s
+
+	screenshot:
+		mac: command + shift + 5
+		windows: windows key + shift + s
+
+	main method: main
+	print statement: sout
+	print for variable: soutv
+
+	comments
+		select line/s that you want to comment then use the shortcut
+			windows: control + /
+			mac: command + /
+
+	formatting the code
+		windows: ctrl + alt + L
+		mac: command + option + L
+
+	How to rename something
+		right click -> Refactor -> rename
+__________________________________________________________________
+
+Introduction
+
+Saim (pronounced as rhyming with dime)
+
+This program: sublime text. We will use it for notes
+
+Schedule
+	4 class recordings during week
+	Saturday: Live Review
+
+	We will talk about in more details when they get closer
+		week 3:
+			Thursday: Office Hours
+		week 7:
+			Monday: Avengers
+
+	Live Class Flow [3 hour blocks]:
+		45-50 min class
+		10 - 15 min break
+		45-50 min class
+		10 - 15 min break
+		45-50 min class
+
+42 Days of Java = 16 weeks
+16 week automation
+
+Zoom raw recordings + Edited video on LMS
+
+Discord channels
+
+	announcements: Important announcements will be shared here
+
+	* class-recordings: Each weeks content will be shared here
+
+	general: off topic conversations
+
+	class_chat: live chat during class. Keep it on topic. This is for interaction during live classes. I will give time to ask questions before going to the next topic. If you ask a question outside of the time I may skip it. Questions should be asked in questions_anwsers channel
+
+	questions_anwsers: during live classes you can ask any question and George will help. Especially important if something is not working on your side, not question about topic
+
+	code: where the code from live classes will be shared
+		-> All code will always be on GitHub too
+
+	saim_only: where I will share things so they don't get lost in the chats
+
+What should you do if you have a questions: google -> mentor/group channel -> question-answer channel
+	also depends on the time you are asking * review the orientation slides
+
+GitHub: this is where the code and notes will be shared
+
+Replit: practices/homework to improve our code skills. no due dates
+
+Program expectations
+__________________________________________________________________
+
+programming introduction
+
+	binary:
+		language the computer understands
+		build of 0s and 1s
+
+	programming language: more understandable to us -> high level
+		closer to English than binary
+
+	To go from a high level to a low level (machine understandable) we can compile/translate
+
+	Where do programmers write code?
+		any text file
+
+		IDE: integrated development environment
+			-> a tool to help us write code
+			we will use IntelliJ
+
+	File: stores data
+		extension
+			.txt
+			.doc
+			.jpg
+			.csv
+			.pdf
+			.mp3
+			.java
+			.class
+__________________________________________________________________
+
+java
+
+	java programming can be used for many purposes
+	We are learning java for testing. Test Automation
+
+	We write java code -> it will get translated and converted to binary -> then computer can understand
+
+	How does java work:
+
+		write code 		-> 	compile 	-> bytecode
+		(.java)								(.class)
+
+		bytecode runs in the jvm. The jvm translates(interpreted) to machine level
+
+	------------------------------------------------------------------------
+
+	What is the different between JDK, JRE, JVM
+
+		JDK: Java development kit
+			allows you to write java code
+			contains the JRE and JVM, and compiler
+
+		JRE: Java runtime environment
+			contains JVM, JRE libraries(files), which allows java code to be run
+
+		JVM: Java virtual machine
+			runs the java code
+			interprets the bytecode to binary
+__________________________________________________________________
+
+IntelliJ
+
+	Project name: fall23-java-live
+
+	By default all projects are made in a folder called IdeaProjects
+		this folder is under your user
+
+	------------------------------------------------------------------------
+	- Creating an Intellij Project
+		Open Intellij
+		Click create a New Project
+		Enter the Project Name
+		Check the location for IdeaProjects otherwise you can change it
+		Make sure Java is selected
+		Build System: IntelliJ
+		Make sure your JDK version is selected
+		Click create
+	------------------------------------------------------------------------
+
+	IntelliJ project components
+
+		project name: Project folder
+		src: source folder
+		package: folder
+		class: java file
+		console: window that shows your outputs
+		out: folder that has the bytecode
+
+		How to run the program: click the green arrow next to main method, right click -> run
+		IntelliJ saves automatically
+
+	------------------------------------------------------------------------
+
+	Settings to change
+
+		settings:
+			windows:
+				file -> settings
+			mac:
+				IntelliJ IDEA -> preference/settings
+		Font:
+			preference window -> Editor -> Font
+
+		Zoom in and out
+			In settings/preferences
+			Editor -> General
+			Mouse Control: Select Change Font size with command + wheel in
+
+		Add soft wrap to files
+			In settings/preferences
+			Editor -> General
+			Soft wraps: add this -> *.java;
+
+		Set Compiler in IntelliJ:
+			preference window -> Build, execution, deployment -> Compiler ->
+		Java Compiler -> set the "Byte Code Version" to 11
+
+	rainbow brackets: this plugin will help you better see brackets in the code
+		settings -> plugins -> rainbow brackets
+
+__________________________________________________________________
+
+java file
+
+	Class: HelloWorld
+		no space
+
+	Java is not space sensitive  (in the code)
+	Java is case sensitive (lowercase and uppercase matter)
+	A java file will have a class. The class by itself does not run.
+
+	Syntax: grammatical rules for the language
+__________________________________________________________________
+
+main method
+
+	public static void main (String [] args) {
+	}
+
+	-> main method: allows you to run code
+
+	-> When do you make main method: in every class that you want to run
+
+	The code inside main method will run line by line, top to bottom, left to right.
+
+__________________________________________________________________
+
+print statements
+
+	System.out.println();
+	-> lets you output something to console
+
+	Difference between print and println
+		System.out.println() -> output to the console and the break the line
+		System.out.print()	 -> output to the console in the same line. It DOESN't break the line
+__________________________________________________________________
+
+comments
+
+	Comments are text in a program file that will not be executed. The compiler ignores these lines
+
+	commenting is a good practice to describe how the code works.
+
+	They serve as documentation and help other people understand how the code works
+
+	- Comment types
+
+		Single line comment: in a single line with two forward slashes
+			// this is a single line comment
+
+		Multi line comment: can be used to group many lines as a comment with opening /* and closing */
+
+			/*
+				comment line 1
+				comment line 2
+				comment line 3
+			*/
+
+		Java doc comment: similar to multi line comments, but provides more features for HTML documentation. Starts with /** and closes with */
+
+			/**
+			*	comment line 1
+			*	comment line 2
+			*	comment line 3
+			*/
+
+		TODO:
+			// TODO: study more comment
+
+			The TODO text is detected in a comment and IntelliJ can detect the TODO items.
+
+			Look at the bottom left for the todo tab or
+			view -> tool windows -> todo
+__________________________________________________________________
+
+escape sequence
+
+	Q: How can you output this:
+			I like "java" programming
+
+			System.out.println("I like "java" programming"); <-- ERROR
+
+	We can use the backslash to define a character we want to output
+		-> this is useful when the character we want to output is also part of java syntax
+
+		\
+
+		for example: if we want to output a " quotation mark we can do:
+			\"
+
+			"java" -> \"java\"
+			System.out.println("I like \"java\" programming");
+
+		for example: if we want to output a \ backslash we can do:
+			\\
+
+            The first backslash is for the syntax of escape characters
+            The second backslash is for the backslash character to be output
+
+		some more useful escape characters:
+
+			code 	-> output
+			\" 		-> "
+			\\ 		-> \
+			\'		-> '
+			\n 		-> next line
+			\t 		-> tab

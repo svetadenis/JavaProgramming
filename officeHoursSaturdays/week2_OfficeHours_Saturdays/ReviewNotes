@@ -1,0 +1,262 @@
+10/21/2023
+
+Week 2
+Day03 - Variables
+Day04 - Primitive Castings, Concatenation
+__________________________________________________________________
+
+Replit
+	Replit next week will include something called Scanner
+	We will learn about how to use Scanner in week 4, but it is being used in replit to be able to test your code.
+	It gives dynamic values instead of hard coded ones. You don't need to do anything with the Scanner itself. That part is predefined. You will just use a variable as you normally would to print. Think that the value of the variable can be anything and focus on how that dynamic variable can be printed.
+
+Office Hours will start in week 4
+__________________________________________________________________
+
+Datatypes
+Variables
+String
+char
+Concatenation
+Primitive Type Casting
+Arithmetic Operators
+__________________________________________________________________
+
+variables
+
+	container to hold data/information
+	allows us to use that information multiple times
+		re-usability
+
+	- Declare a variable: makes a container/variable ready to be used
+
+		dataType variablName;
+		int age;
+
+	- Assign a value to a variable: store some value/number into your container
+
+		variableName = value;
+		age = 10;
+
+			 = equals sign is called the assignment operator
+
+	- Declaring and assigning at the same time
+
+		dataType variableName = value;
+		int age = 10;
+
+	- multiple variables declaration in 1 statement:
+
+			int apples, grapes, bananas, mangoes;
+			apples = 10;
+			grapes = 3;
+			bananas = 23;
+			mangoes = 55;
+
+	- Using/Printing variables
+		To use a variable's value we use just the variable name
+
+			ex: int students = 200;
+				System.out.println(students); // this will print 200
+				System.out.println("students"); // this will print student as text
+				System.out.println(STUDENTS); // this will give an error because 										// STUDENTS variable does not exist
+	-  reassigning
+		changing the value something else, old value is lost. Updating the variable
+
+	- Hardcoded: directly in the code, so it is difficult to change
+
+__________________________________________________________________
+
+datatypes
+
+	Primitive datatypes: byte, short, int, long, float, double, boolean, char
+
+	Object types: (we will spend more time on this later)
+		-> String
+
+	-> all primitives are lowercase
+
+		whole numbers: (ex: 40)
+			byte
+			short
+			int   <- by default
+			long
+		floating numbers: (ex: 24.62)
+			float
+			double  <- by default
+		characters: a single character, uses ''
+			char
+		boolean: true or false
+			boolean
+
+	-> compiler uses int and double by default
+
+	How to tell the compiler you want long number: use an 'L' at the end of the number
+	How to tell the compiler you want float number: use an 'F' at the end of the number
+
+    char : holds a single character
+    	-> each character is represented in a single quote 'a'
+
+	------------------------------------------------------------
+
+        char ch = 'B';
+        char lastLetterOfMyName = 'z';
+
+		Q: how does the computer know we want a certain character
+			There is character sets that associate characters to a number
+
+			ASCII (American Standard Code for Information Interchange)
+      			is one character set that is used for english
+      			it is part of the unicode character set which handles many languages and characters
+
+		char datatype can be give a value in two ways
+			1) character inside of a single quotation  ''
+				ex: char grade = 'A';
+			2) use the number that is representing each character
+				ex: char grade = 65;
+
+	------------------------------------------------------------
+
+	String: sequence of characters in double quotations
+		object type
+
+    	Q: What is the difference between 'a' and "a"
+			the types are different. The 'a' is a char type and the "a" is a String type
+			object types take more memory
+
+__________________________________________________________________
+
+naming conventions
+
+	convention: what everyone follows
+
+	Example: today is sunday
+
+	project/folder: today-is-sunday
+
+	package: lowercase, use underscore for multiple words (snake case)
+		-> in recordings camel case
+
+		* In the recordings Muhtar did not use the convention, but we should use it
+
+		ex: today_is_sunday
+
+	classes: first letter is uppercase and the rest lowercase, for each word
+		Pascal Case: Every word starts with an uppercase
+
+		ex: TodayIsSunday
+
+	variables: camel case
+		-> first word is lowercase, then any following words start with an uppercase
+
+		ex: todayIsSunday
+
+variable naming rules
+
+	- make the variable names are clear as possible
+		dont do:
+
+			int x;
+			int a;
+
+	- We cannot use reserved keywords, which are already used by Java as a programming language.
+	public, static, package, void, for, if, etc.
+
+	https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
+
+	- Variables can contains these:
+		- any letter (A-Z, or a-z)
+		- any number (0-9)
+				Cannot start with numbers, but it can contain numbers.
+					Ex:
+						1stWord -> INVALID
+						word2 -> VALID
+
+		- only special characters allowed are dollar sign $ and underscore _
+				but it is not encouraged.
+
+				int _$ = 55;
+				_1Number
+__________________________________________________________________
+
+Concatenation
+
+	concatenation operator +
+
+			concatenation: combining text with any data, returns String
+            concatenation turns everything to a String
+
+				concatenations vs addition
+					String + String -> concatenation
+					String + number -> concatenation
+					String + char -> concatenation
+					number + number -> addition
+					char + char -> addition
+__________________________________________________________________
+
+Primitive Type Casting
+
+	Convert from one primitive datatype to another
+
+	order:  [SMALL] byte -> short -> int -> long -> float -> double [LARGE]
+
+		Widening casting (implicitly)
+			Going from a smaller datatype to a bigger datatype happens automatically
+
+				int i = 40;
+				long l = i;
+
+		Narrowing casting (explicitly)
+			Going from a bigger datatype to a smaller datatype needs manually casting
+
+			Casting Formula:
+				smallerDatatype varName = (smallerDatatype) biggerDatatypeValue
+
+				long l = 100;
+				int i = (int) l;
+
+		Data loss: if you go from a bigger datatype to a smaller datatype and the smaller datatype cannot hold the value in the range there will be some data lost
+
+		char <-> int
+			able to cast between these types
+__________________________________________________________________
+
+ Arithmetic Operators
+
+	+ addition
+	- subtraction
+	* multiplication
+	/ division
+	% remainder/modulus
+
+	- When you use arithmetic operators between two different datatypes the result will be the bigger type.
+
+	- When you use datatypes like short or byte and use some arithmetic operators the values are changed to int, so the result of the operation is also int
+
+__________________________________________________________________
+
+	bit is binary number
+	1 byte is 8 bits
+	1 GB is ~ 1 billion bytes
+__________________________________________________________________
+
+Task: we want to swap the buckets of water and juice
+
+bucket 1 -> water
+bucket 2 -> juice
+have a bucket 3, which is empty
+move water to bucket 3
+
+bucket 1 ->
+bucket 2 -> juice
+bucket 3 -> water
+
+move juice to bucket 1
+bucket 1 -> juice
+bucket 2 ->
+bucket 3 -> water
+
+move water into bucket 2
+
+bucket 1 -> juice
+bucket 2 -> water

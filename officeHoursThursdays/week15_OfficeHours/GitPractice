@@ -1,0 +1,10 @@
+All the changes you make stay local until you commit and push them
+
+We have remote repository: where everybody in the team push and share their code
+
+Git Day 1:
+add
+commit
+push
+create a repository
+branching? :  the reason for it - we don't want to effect the main code before it is checked

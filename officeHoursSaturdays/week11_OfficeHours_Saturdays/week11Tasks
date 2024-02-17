@@ -1,0 +1,74 @@
+Practice Tasks
+
+    ------------------------------------------------------------------------
+
+TrafficLight [encapsulation]
+
+    Create a class Traffic Light
+
+    instance variable: color (String)
+
+    the constructor should call the setter method
+
+    encapsulate the class
+        the setter: only set the color if it is green, red, or yellow
+
+	------------------------------------------------------------------------
+
+Cities [encapsulation, class, object, static, Scanner, ArrayList]
+
+    copy the given text file with city information into your project
+    the information is given in this format with each information separated by a comma
+        city name,growth rate,population,state
+
+    create a class City
+    encapsulated instance variables:
+        city name, growth rate, population, state
+    create a constructor to initialize all the variables
+    create a toString of all the information
+
+    create a class Database
+    create a static variable: data (ArrayList of City)
+    create a static block and read the information from the file
+    while reading the information from the text file create City objects and add them into the ArrayList of Cities
+    -> look back to day 10 for using Scanner to read a file
+
+    create a Runner class to interact with the data
+        filter by state
+        filter by city names started with a specific letter
+        filter cities by their growth rate
+        filter cities by their population
+
+    ------------------------------------------------------------------------
+
+DrinksVending [challenge] [class & object, encapsulation, ArrayList, Scanner, loops, methods]
+
+	We will create program that will allow you to select a Drink from the vending machine.
+
+	1) Create a Drink class:
+		create instance variables: name, price, quantity
+        encapsulate the class
+		create a constructor to initialize all the variables
+		create a toString to display the information cleanly
+
+	2) Create a DrinkVending class:
+		create instance variables: revenue, allDrinks (ArrayList of Drink objects)
+		create a no arg constructor that will create an empty ArrayList
+		create an overloaded constructor that will accept an ArrayList of Drinks of objects to initialize the vending machine with some Drinks
+		create a toString to display the drinks in a nice format
+
+        create a private method getDrink with a String name parameter and Drink return type
+            check if the vending machine has the drink that is being check based on the given name
+            return the Drink object if the drink is in the vending machine
+            otherwise return null if the Drink could not be found
+
+        create a method vend that will accept a String for the Drink name
+            if the drink is in the vending machine and is in stock return the Drink object. also reduce the quantity of the that Drink by 1
+            otherwise return null if the Drink could not be found
+
+
+	   create a method stock that will accept an ArrayList of Drinks to fill the vending machine
+            if it is a new Drink add it into vending machine
+            otherwise if the Drink is already in the vending machine increase the quantity by amount being added
+
+	3) Create a new class and test everything: Drink objects, DrinkVending object, constructors, stock & vend methods

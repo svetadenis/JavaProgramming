@@ -1,0 +1,85 @@
+Practice Tasks:
+
+	------------------------------------------------------------------------
+
+Balance [single if, operators, variables]
+
+	Declare and assign the following variables
+		amount balance & withdraw amount
+
+    Check the balance after the withdrawal
+        if you withdrew more money that you had in the account add a overdraft fee to the balance by subtracting 100
+
+    In both cases print the remaining balance after withdrawing
+
+	------------------------------------------------------------------------
+
+Lockdown [if else]
+
+	Declare and assign a year variable
+
+	Using the year determine if we were on lockdown and activities done on a daily basis
+
+		if the year was 2020 or 2021 print:
+			Stay at home
+			Practice java
+			Wear a mask
+
+		if the year was any other year print:
+			Party
+			Practice Java
+			Travel
+
+	------------------------------------------------------------------------
+
+Overtime [if else, operators, variables]
+
+	Declare and assign the following variables
+		hourly rate & number of hours worked
+
+	Calculate your total net pay for the week. Also consider if any overtime should be paid. Overtime will be 1.5 times the normal rate and should be paid for every hour over 40.
+	(if you worked 43 hours total, you will get 40 hours normal pay and 3 hours overtime pay)
+
+	Output different messages based on overtime
+		if normal hours were worked (40 hours or less):
+			You worked $hours hours, so your total net pay is: $netPay
+
+		if you worked overtime (more than 40 hours):
+			Wow you worked $hours hours so you will get $overtime_hours of overtime. Your net pay is $netPay
+
+	------------------------------------------------------------------------
+
+Diving [multibranch]
+
+	Declare and assign a oxygen tank level. This level will be a whole number percentage, so 80 would represent 80% oxygen
+
+	Check how much oxygen is left in the tank and output a corresponding message
+
+		use these ranges:
+			100 - 90: Your tank is full
+			89 - 80: A lot left to use
+			79 - 70: Don't go too far
+			69 - 60: Start to head back
+			59 - 50: Be careful now you at at 50%
+			Less than 50: Critical
+
+------------------------------------------------------------------------
+
+{IQ} Finra [multibranch, operators]
+
+	Create a program that will print the given number. But if the number is a multiple of 3 print "FIN" instead of the number. If the number is a multiple of 5 print "RA" instead of the number. And if the number is a multiple of 3 and 5 print "FINRA" instead of the number
+
+		ex:
+			number: 3
+			output: FIN
+
+			number: 10
+			output: RA
+
+			number: 15
+			output: FINRA
+
+			number: 7
+			output: 7
+
+	Hint: you will be checking for divisibility, so you will need to use the % operator

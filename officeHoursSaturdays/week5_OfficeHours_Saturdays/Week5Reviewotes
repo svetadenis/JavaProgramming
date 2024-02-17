@@ -1,0 +1,77 @@
+11/12/23
+
+Week 5
+
+Day11 - String Continue
+Day12 - Custom Methods Intro
+__________________________________________________________________
+
+String methods
+next week has more on methods, so we will review methods next week
+__________________________________________________________________
+
+String methods: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+
+	How methods are used:
+		stringObject.method()
+
+		equals(): checks if the Strings have the same characters
+			returns boolean
+
+		equalsIgnoreCase(): checks if the Strings have the same characters, but ignores case sensitivity
+			returns boolean
+
+		toUpperCase(): converts your characters to uppercase
+			returns String
+
+		toLowerCase(): converts your characters to lowercase
+			returns String
+
+		length(): gives the number of characters are in the String
+			returns int
+
+		trim(): removes spaces from the beginning and end of the String
+			returns String
+
+		isEmpty(): checks if the String has no characters
+			returns boolean
+
+		startsWith(): checks if the String starts with certain characters
+			returns boolean
+
+		endsWith(): checks if the String end with certain characters
+			returns boolean
+
+		charAt(int): gives the character at the given index number
+			returns char
+
+				charAt(int index) -> index parameter
+				charAt(0) -> 0 is argument
+
+		indexOf(): finds the index of the given char or String
+			returns int
+
+				indexOf(char)
+				indexOf(String)
+				indexOf(char, int)
+				indexOf(String, int)
+
+		substring(): takes a part of the String
+			returns String
+
+				substring(int): the given is the starting index for what you want to keep
+				substring(int, int): the first index is the starting char until the second index, which is not included
+
+		replace(): replaces the given char/Strings
+			returns String
+
+				replace(String, String)
+				replace(char, char)
+
+		replaceFirst(String, String): replaces the first instance of the given String
+			returns String
+
+		lastIndexOf(String): gives the index of the last occurrence of the given String
+			returns int
+
+_______________________

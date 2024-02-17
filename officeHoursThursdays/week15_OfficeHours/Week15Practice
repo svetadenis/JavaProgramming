@@ -1,0 +1,140 @@
+Office Hours Topics:
+
+    reviewing week 14:
+    Polymorphism
+    Exceptions
+    Git day 1
+
+----------------------------------------------------------------------------------------
+
+Energy [inheritance, polymorphism]
+
+    create a class Energy
+    create instance variables:
+        amount (double), unit (hard code as "Joules")
+    create a constructor to initialize the variables
+    override the toString as needed for all classes
+
+    create a class Generator that is a sub class of Energy
+    create instance variables:
+        price, max capacity
+    create a constructor to initialize the variables
+    create an instance method: run()
+
+    create a class SolarGenerator that is a sub class of Generator
+    create a constructor to initialize the variables
+    override the run method
+
+    create a class GasGenerator that is a sub class of Generator
+    create instance variables:
+        gas level
+    create a constructor to initialize the variables
+    override the run method
+
+    create a separate class to Test the SolarGenerator and GasGenerator objects with different references
+
+    other classes if you want to create more: Wind, Hydro
+
+----------------------------------------------------------------------------------------
+
+Building Part 2 [polymorphism, method, ArrayList]
+
+    - create a class BuildingUtil
+
+        create a static method Rent(Building obj)
+            return: double
+            parameters: Building type
+
+            implementation:
+                if the Building is House type
+                    return price / 360 * 2
+
+                if the Building is Apartment type
+                    return price / 600
+
+                if the Building is OfficeBuilding type
+                    return price / 1000
+
+        create a static method search(String location)
+            return: Building
+            parameters: String location
+
+            implementation
+                if the location is Great Falls return a House object with:
+                    location: Great Falls
+                    price: 500_000
+                    number of residents: 4
+
+                if the location is FairFax return a Apartment object with:
+                    location: FairFax
+                    price: 750_000
+                    month for lease: 6
+
+                if the location is McLean return a OfficeBuilding object with:
+                    location: McLean
+                    price: 3_000_000
+                    number of floors: 6
+
+    - create a class RealEstate
+        create a main method
+
+        create an ArrayList of Building
+            -> this can hold objects of House, Apartment, & OfficeBuilding
+
+        create a bunch of House, Apartment, & OfficeBuilding objects and store them into the ArrayList
+
+        mini tasks:
+
+            - Search for a Building in a specific location
+            - Iterate through and show the rent of all the buildings
+            - Find the most expensive Building, print all its information
+            - Find the least expensive Building, print all its information
+            - Filter all the Buildings in one location(ex search for buildings in Chicago)
+            - Filter all the Buildings within a certain price range
+
+----------------------------------------------------------------------------------------
+
+Stocks [IQ][problem solving]
+
+    given an array of stock prices find the total profit that can be made from buying and selling stocks
+    you can buy or sell on any day, but you can only hold one stock at a time
+
+    ex: [4, 1, 7, 9, 4, 1]
+        output: 8
+            buying on day 2 and selling on day 4 would give a profit of: 9 - 1 = 8
+
+    ex: [1, 2, 1, 4, 2, 2, 1]
+        output: 4
+            buying on day 1 and selling on day 1 would give a profit of: 2 - 1 = 1
+            buying on day 3 and selling on day 4 would give a profit of: 4 - 1 = 3
+
+    ex: [10, 7, 5, 2]
+        output: 0
+            no profit could be made because the price always went down
+
+----------------------------------------------------------------------------------------
+
+Review concepts:
+    exception, try catch, multi catch blocks, finally
+
+    git day 1: git, GitHub, local repository, commit, push, gitignore
+
+
+for more extra practice create the Shopping and WebElement objects from last week with polymorphic references
+
+----------------------------------------------------------------------------------------
+
+As a Tester why do we teach you Polymorphism:
+* Interview question: what is ....OOP topic, how did you use it in testing/framework?
+
+* When we are creating WebDriver Objects, we will create them in a polymorphic way:
+so that we can test Chrome browser, or Firefox, Safari, Edge with the same code without changing
+we will cast the object to be able test all the browsers
+Webdriver is an interface and parent of all browser classes in Selenium
+Webdriver driver = new ChromeDriver()
+            test chrome, finish  -- implemetation of mnethods will be for Chrome
+
+          driver = new FirfoxDriver()
+          test firefox  -- implemetation of mnethods will be for Firefox
+
+The Main reason that we want to use polymorphism is to be able to use SAME OBJECT throughout the whole test scenarios

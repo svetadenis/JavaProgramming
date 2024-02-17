@@ -1,0 +1,131 @@
+Office Hours Topics:
+
+    reviewing weeks 1, 2, & 3:
+    variables
+    primitive datatypes
+    concatenation
+    operators
+    single if & if else & multibranch
+    nested if
+
+share code in discord:
+```
+code
+```
+----------------------------------------------------------------------------------------
+
+T1Pizza [variables, operators, concatenation]
+
+    Declare and assign the following variables
+        type (type of pizza), slices (how many slices the pizza has), and people (the number of people eating this pizza)
+
+    Calculate how many slices each person will get and how many are left over. Print the output in this format:
+
+        We ordered a $type pizza with $slices slices. $number_of_people people ate $each_share slices each, so there was $remainder slices left
+
+        Ex: We ordered a cheese pizza with 8 slices. 3 people ate 2 slices each, so there was 2 slices left
+
+----------------------------------------------------------------------------------------
+
+T2CharCase [variables, if statement, operators]
+
+    Create a program that will define a char variable, which will only be defined as an alphabetical letter. The character can be defined in uppercase or lowercase and we want to determine which case it is
+
+    Part 2: also print the next 3 characters after the given character, but only print them if they will not go past z or Z
+
+    Output in this format:
+        $character is $uppercase_or_lowercase
+        The next 3 chars are: c1, c2, c3
+
+        ex:
+            'm'
+            m is lowercase
+            The next 3 chars are: n, o, p
+
+            'Y'
+            Y is uppercase
+            too close to the end
+
+----------------------------------------------------------------------------------------
+
+T3BuyHouse [variables, if statement, operators]
+
+    Create a program that will define two variables: credit score and salary
+    Use the given information to determine if you are eligible for a loan to buy a new house
+    here are the criteria for eligibility:
+        credit score of 720 or above and salary of 100,000 or above
+        credit score of 740 or above and salary of 80,000 or above
+
+    Output:
+        if you are eligible because you meet one of the above conditions:
+            Start packing because you are eligible for this loan!
+        if you are not eligible:
+            Sorry we cannot offer a loan to you at this time
+
+----------------------------------------------------------------------------------------
+
+T4AutoGreeting [multibranch, operators]
+
+    create a program that will define an hour variable and a boolean for am or pm (am = true, pm = false)
+    using the given values to determine what message should be output:
+    if the hours are from 6 am - 11 am, print: Good morning
+    if the hours are from 12 pm - 5 pm, print: Good evening
+    if the hours are from 6 pm - 11 pm or 12 am - 5 am print: Good night
+
+----------------------------------------------------------------------------------------
+
+T5BMI [nested if, multibranch, operators]
+
+	Create a program that will calculate your BMI. Declare and assign the values for a mass (in kilograms) and height (in meters)
+
+	first check if the given values are valid
+		- the kilograms needs to be more than 40 and less than 185
+
+		- the height also needs to be more than 1.2 and less than 2.5
+
+		-> if either of those is not met print: "Sorry we cannot calculate the BMI with these metrics"
+
+	if the given values are valid then calculate and print the BMI using the following formula
+		BMI = mass / height^2
+
+    use these ranges for BMI for print the result
+        Less than 18.5 — Underweight
+        From 18.5 to 24.9 — Normal weight
+        From 25 to 29.9 — Overweight
+        More than or equal to 30 — Obese
+
+    sample data to use:
+        mass = 64
+        height = 1.65
+        -> Normal weight
+
+        mass = 90
+        height = 1.8
+        -> Overweight
+
+        mass = 50
+        height = 1.7
+        -> Underweight
+
+----------------------------------------------------------------------------------------
+
+T6Pandemic Checker [nested if, multibranch, operators]
+
+	Create a program that will define a year. Determine if there was a pandemic in that year. Before checking for pandemics also verify the given year is a valid year value.
+		a valid year is a year in the range of: 0 > year < 2023
+			-> if the given year is not valid do not check anything else and print:
+					sorry $given_year is not a valid year
+
+		if a valid year is given check the ranges and output the pandemic if there was any
+
+	Use this data for years that had a pandemic:
+        1346-1353: The Black Death
+        1665-1666: Great Plague of London
+        1770-1772: Russian plague
+        1889-1890: Flu pandemic
+        1916: American polio epidemic
+        1918-1920: Spanish Flu
+        2009-2010: H1N1 Swine Flu pandemic
+        2014-2016: West African Ebola epidemic
+        2020-2021: COVID-19
+        Any year not in those ranges: No Pandemic in $given_year

@@ -1,0 +1,57 @@
+Practice Tasks
+
+	------------------------------------------------------------------------
+
+Shopping List [do while, String]
+
+	create a program that create a shopping list for the user. The program will ask the user to enter the items one by one.
+
+	the flow:
+		ask the user for the item
+		add item to the shopping list
+		ask user if they want to add more items
+
+	when the user is done creating the list print it
+
+	------------------------------------------------------------------------
+
+[IQ] Prime in range [nested loop, methods, conditional]
+
+	create a method that will accept a number. Print out all the prime numbers in the range between 2 and the given number
+
+	a number is a prime number when it is only divisible by 1 and itself
+
+	ex:
+		Input:
+			50
+		Output:
+			2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+
+	------------------------------------------------------------------------
+
+[IQ] Frequency of Characters [nested loop, String]
+
+	create a program that can find the frequency of each character from a string
+
+			 Ex:
+                        str = "aabcccd";
+                        output:
+                                a2b1c3d1
+	------------------------------------------------------------------------
+
+Address [object type]
+
+	create a class called Address
+	declare these instance variables:
+		street, city, state, zipcode, country
+
+	create a setInfo() method to initialize these variables
+
+	create a toString() that shows the full address in the following format
+		$street
+		$city, $state $zipcode
+		$country
+
+	create a different class and create some Address objects
+
+	------------------------------------------------------------------------

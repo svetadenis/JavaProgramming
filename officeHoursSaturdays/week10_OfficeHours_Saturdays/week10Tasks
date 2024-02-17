@@ -1,0 +1,152 @@
+from last week
+SumDigits [Wrapper class, ArrayList, loop]
+
+    Create a program that will define an ArrayList of String. The elements in this ArrayList will be number digits like: "123". Calculate the sum of the digits and store them into a new ArrayList of Integers. Print all the sums of the digits at the end.
+
+        Ex:
+            Input:
+            ["123, "52", "513"]
+            Output:
+            [6, 7, 9]
+Filter Characters [ArrayList, Wrapper class, loop, boolean]
+
+    Create a program that will have a String of different characters, of different types. Filter(group) all the digits, letters, and special characters
+
+        ex:
+            String str = "abcd@!#$etyi123lkjhaqwer%^&879";
+            digits: 123879
+            letters: abcdetyilkjhaqwer
+            special: @!#$%^&
+
+	------------------------------------------------------------------------
+
+Food [class, object, constructor, array]
+    create a class called Food
+        define these instance variables
+            name, quantity, unit price, total price
+
+       constructors
+            - create a constructor that creates a Food object with the name
+            - create a constructor that creates a Food object with the name and quantity
+            - create a constructor that creates a Food object with the name, quantity, and unit price
+                -> call calculatePrice() method here
+
+       methods:
+            - calculatePrice(): multiple the quantity by unit price and assign the value to the total price
+            - toString()
+                return all the Food information
+
+    Create a separate class to create and test the Food objects
+        try making an array of Food objects
+        find all the Food objects that start with 'a' and print the Food object
+        find all the Food objects that have a total price over 20 and print the name of the food
+
+	------------------------------------------------------------------------
+
+Date Time Tasks [LocalDate, DateTimeFormatter]
+
+    - get the current day and find out what the date will be in 130 days
+    - ask the users to enter their birthday and calculate what day of the week their next birthday will be on
+    - define the times a store is open and check if you can visit the store at your current time
+
+    ------------------------------------------------------------------------
+
+Encryption [class, instance, static, methods, loop, String, constructor]
+
+    Create a class Encryption
+
+    define these instance variables
+        message (String)
+        modify number
+        factor number
+
+    create a constructor that will initialize the message
+    create a constructor that will initialize the message, modify number, and factor number
+        call the encrypt method here
+
+    create a toString method that will only print the message variable
+
+    create a method encrypt (instance)
+        return: void
+        parameters: none
+
+        To encrypt every character of the message we will take the modified number and add it to ascii value of each character. Then we will multiply the result by the factor number. After encrypting reassign the encrypted version into the message variable
+
+        Ex:
+            message = "james bond"
+            modify num: 20
+            factor num: 2
+
+            message: 252 234 258 242 270 104 236 262 260 240
+
+    create a method decrypt (static)
+        return: String
+        parameters: message, modify number, factor number
+
+        Given the modify and factor numbers decrypt the message and return the decrypted String. Do the reverse steps we did for encrypting
+
+        Ex:
+        message: 252 234 258 242 270 104 236 262 260 240
+        modify num: 20
+        factor num: 2
+
+        -> james bond
+
+    ------------------------------------------------------------------------
+
+ShowTracker [challenge] [classes, constructors, ArrayList, LocalDate]
+
+    Create a class Show
+        define these instance variables
+            name
+            number of seasons
+            release date
+            boolean completed
+                true - finished
+                false - ongoing
+            audio languages available (String ArrayList)
+
+    create a constructor that will initialize all the variables
+
+    create a toString to display all the information about the Show
+
+        ------------------------------------------------
+
+    Create a class ShowTracker
+
+        define these instance variables:
+            username
+            password
+            tracked shows (ArrayList of Show objects)
+
+    create a constructor that will initialize all the variables
+
+    create method trackShow(Show)
+        this method will accept a Show object. Check if the show is already tracked and if it is not add it to the list of shows
+
+    create a method filter(String)
+        return all the shows that are available in the defined language
+            ex: filter("english") -> returns all the shows that can be viewed in English
+
+    overload the method to accept a boolean argument filter(boolean)
+        if the boolean is true return the list of shows that are complete
+        if the boolean is false return the list of shows that are ongoing
+            ex: filter(true) -> return all the shows that are complete
+
+    overload the method to accept a LocalDate argument filter(LocalDate)
+        return all the shows after the defined date
+
+    create a toString to display the show tracker information
+
+        ------------------------------------------------
+
+    Sample data to use, or create your own
+
+    name - number of seasons - release date - completed - available languages
+
+    the last of us - 1 - January 15, 2023 - false - english, spanish
+    game of thrones - 8 - April 17, 2011 - true - english, spanish, german
+    family feud - 24 - July 12, 1976 - false - english
+    squid game - 1 - September 17, 2021 - false - korean, english, french, spanish, german
+    you knock on my door - 2 - September 8, 2021 - true - turkish
+    waiting for the sun - 1 - July 2, 2013 - true - turkish

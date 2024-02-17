@@ -1,0 +1,93 @@
+Office Hours Topics:
+
+    reviewing week 11:
+    ArrayList
+    Date & Time
+    Constructors
+
+----------------------------------------------------------------------------------------
+
+File Extensions [ArrayList, String]
+
+    create a program that has an ArrayList with different file names
+
+    find all the file names that have the extension: .java
+    remove all the file names that have the extension: .png, .mp3
+
+    sample file names: "First.java", "HelloWorld.java", "Notes1.txt", "Notes2.mp3", "Review1.mp3", "Practice.java", "dog.png", "cat.png", "Pet.mp3", "Automation.java", "Song.mp3"
+
+----------------------------------------------------------------------------------------
+
+[IQ] Second Biggest Number [ArrayList, loop, conditional]
+
+    Create a program that will have an ArrayList of Integers. Find the second biggest number in the list.
+    Note: the 2nd biggest should be unique meaning it should be different from the max number
+
+Example:
+    Input:
+        [4,3,1,4,5,2,4,8,4,8]
+    Output:
+        5
+
+----------------------------------------------------------------------------------------
+
+Round Time by 15 [LocalTime]
+
+    create a program that will round the current time to the nearest 15 minute interval
+    hint: 8 minutes is the middle and rounds up
+    ex:
+        1:13 -> rounds to 1:15
+        1:07 -> rounds to 1:00
+        1:08 -> rounds to 1:15
+        1:55 -> rounds to 2:00
+        1:35 -> rounds to 1:30
+
+----------------------------------------------------------------------------------------
+
+AppointmentList [class, object, constructor, LocalDateTime, ArrayList]
+
+    create a class Appointment
+        instance variables:
+            name, LocalDateTime
+
+        create a constructor to initialize all the instance variables
+
+        create a toString method returning the name and formatted date and time
+
+        create a method to change the date of an Appointment by n days, where n is the given parameter
+
+    create a Runner class with a main method
+    create an ArrayList of Appointments to test
+        - check if there is any appointments today
+        - find a specific appointment by name and update its date
+        - remove any appointments that have already passed
+
+----------------------------------------------------------------------------------------
+
+Hobby [classes, constructors, ArrayList]
+
+    create a class called Hobby
+        instance variables:
+            name, annual cost, is outdoors (boolean), requires others (boolean)
+
+        create a constructor to initialize all the instance variables
+
+        methods:
+
+            doIt():
+                print: Doing $name-of-hobby $outside-or-inside
+                    ex: new Hobby("golf", 1000, true, false).doIt() -> Doing golf outside
+                    ex: new Hobby("puzzles", 50, false, true).doIt() -> Doing puzzles inside
+
+            toString()
+                return all the Hobby information
+
+    Create a separate class to create and test the Hobby objects
+
+        - create an ArrayList of Hobby objects
+        - create and add Hobby objects
+        - iterate through the ArrayList and execute the doIt() method on each Hobby object
+        - create a copy ArrayList and remove all outdoors Hobbies
+        - create a copy ArrayList and remove all hobbies requiring other people
+        - create a copy ArrayList and remove all hobbies that cost more than $500 annually
+

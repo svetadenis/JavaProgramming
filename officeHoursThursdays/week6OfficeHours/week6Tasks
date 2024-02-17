@@ -1,0 +1,89 @@
+Office Hours Topics:
+
+	reviewing week 5:
+	String
+
+----------------------------------------------------------------------------------------
+
+T1GoodString [String, indexes]
+
+	Create a program that will check a given String. If the word "good" starts at index 1 or 2 print true otherwise print false
+
+	ex:
+		goodday --> false
+		agoodmovie --> true
+		nogoodtoday -> true
+		notgoodfornow -> false
+
+----------------------------------------------------------------------------------------
+
+T2BeginningAtEnd [String, indexes]
+
+	Create a program that will check if the first two characters of a given String are also the last two characters of the String. Print true if they are the same and false if they are not the same
+
+	ex:
+		educated -> true
+		java -> false
+		eraser for the computer -> true
+		panda giftwrap -> false
+
+----------------------------------------------------------------------------------------
+
+T3UberReceipt [String, indexes]
+
+    create a program that will extract details from a receipt emailed for your uber ride
+    extract the number of miles, number of minutes, and total cost
+
+    here is an example receipt:
+
+        String receipt = "Uber Receipts 2 days ago\n" +
+                "Thanks for using Uber. Remember to rate your driver\n" +
+                "The *5* mile trip took about |20| minutes\n" +
+                "Your total was $25.19";
+----------------------------------------------------------------------------------------
+
+T4MoveFirstWord [String, Scanner]
+
+    create a program that will ask the user to enter a sentence. Print the sentence with the first word moved to the end
+
+    Input:
+        Java is a fun language
+    Output:
+        is a fun language Java
+
+----------------------------------------------------------------------------------------
+
+T5LongestWithA [Scanner, String, conditional, logical]
+
+	Create a program that will ask the user to enter 3 words. Find the word that contains 'a' and is the longest out of the others
+
+	ex:
+		java
+		mouse
+		computer
+
+	Output: java
+
+	Extra: Instead of just checking for "a" ask the enter to enter the character that should be used to determine the result
+
+----------------------------------------------------------------------------------------
+
+Left over from review
+
+MiddleCharacters [indexes, cases, length]
+
+	Create a program that will ask the user to enter a word. Return the word in lowercase expect for the middle character/s in uppercase
+
+	Note: based on if the word is even or odd there will be either two middle characters(even length) or one middle character (odd length)
+
+	Ex:
+		input:
+			apple
+		output:
+			apPle
+
+		input:
+			JavA
+		output:
+			jAVa
+--------------------------------------

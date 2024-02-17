@@ -1,0 +1,352 @@
+1/27/2024
+
+Week 16
+Day40 - Collection Continue
+Day41 - Map
+Day42 - Map Continue
+
+Git Day 3 - Branch Strategy, Team Collaboration
+__________________________________________________________________
+
+LAST DAY OF JAVA
+Java Module Completion: https://docs.google.com/forms/d/1prZB00r6y9BrZA5Q5A4dehMBC5kELhtGVZVVZj_RDB4/viewform?edit_requested=true
+
+Next Week: Self Study Week
+Week 18: Automation classes will start. Git Day 4 will also be during this week. Half of the review will be Git (my last Saturday review) & the other half will be HTML
+
+Office hours:
+    Feb 8 - Map Practice
+    Feb 15 - Git Commands Practice
+
+Last Java Avengers: Feb 12th
+Selenium office hours and avengers start after
+
+Class Photo
+
+Extra Topic Short Videos: StringBuilder, Enums, Generics, Functional Interface, Lambda Expressions, Stream
+
+Hackerrank
+LeetCode
+__________________________________________________________________
+
+Stack
+Queue
+Iterable
+Map
+
+Branch Strategy
+Team Collaboration
+Git Live Demo
+__________________________________________________________________
+
+Stack vs Queue
+
+Stack
+    sub class of Vector
+
+    LIFO: Last In First Out
+        ex: stack of books
+
+    push(): adding the element to the top of the stack. also returns the element added
+    pop(): removing the element at the top of the stack. also returns that element removed
+    peek(): returns the element at the top of the stack
+
+Queue
+
+    Queue is an interface inheriting the Collection interface
+
+    FIFO: First In First Out
+        ex: a line of people
+
+        add() <--> offer()
+        remove() <--> poll()
+        element() <--> peek()
+
+        The methods on the left can cause an exception to occur whenever the method fails
+        The method on the right just return null
+
+    ------------------------------------------------------------------------
+
+Classes that implement Queue
+
+    PriorityQueue: data structure that stores elements based on its own priority. Sometimes looks like natural order, but cannot be predicted (random)
+
+        does not accept null
+
+    Note: Even though Queue is the interface the PriorityQueue has its own implementation of the idea
+
+    ArrayDeque: implementing Deque. More proper queue type
+        also has access to both side of the collection
+
+        does not accept null
+__________________________________________________________________
+
+Iterable
+
+    interface
+    parent of the Collection interface
+
+    any data structure that implements the Iterable, which is any data structure that implements Collection interface, can be iterated with a for each loop
+
+    The interface defined this abstract method:
+
+        Iterator<T> iterator();
+
+        this abstract method was implemented in the collection classes. The methods returns an iterator object which allows us to iterate through the elements one at a time using the methods of the iterator. It iterates through from beginning to end
+
+        -> think of the iterator as a pin
+        -> when the iterator method is called the start point is BEFORE the first element
+
+    methods:
+        hasNext(): returns boolean. checks if there is any element next to the current position of the iterator(pin)
+        next(): returns the element. first moves the iterator to the next element and it returns that element
+        remove(): remove the element at the current iterator position
+__________________________________________________________________
+
+Map
+
+    interface that does NOT inherit the Collection interface
+
+    Map is still part of the java collection framework
+
+    the main idea of this interface is the key / value format for data
+
+        Entry: key / pair
+
+        each key is linked to some value
+
+        -> keys must be unique
+        -> values can be duplicate
+
+Syntax:
+
+    Map < keyDatatype, valueDatatype > referenceName = object
+
+    Map<Integer, String> map = new HashMap<>();
+
+Classes that implement the Map interface
+
+    HashMap: order the entries is not guaranteed (random order)
+
+        using hashing algorithm (fast and efficient)
+
+    LinkedHashMap: insertion order of the entries is maintained
+
+    TreeMap:
+        implements SortedMap (interface)
+
+        The entries are sorted in a natural order(based on the keys)
+            -> ascending order, smallest to biggest, lexicographical
+
+        null key is not allowed
+
+    HashTable: the order is not guaranteed (random order)
+        legacy class -> inheriting Dictionary
+        synchronized (thread - safe)
+        both null keys and values not allowed
+
+    ------------------------------------------------------------------------
+
+Methods:
+
+    put(key, value):
+        takes the key and value and stores that entry into the map
+
+        -> if the key already exists the value will be updated(reassigned) because the key must be unique
+
+    get(key):
+        returns the value that is linked to the given key
+
+        -> what if the key does not exist? it returns null
+
+    remove(key)
+        uses the key to determine which entry to remove
+
+    containsKey(key)
+        returns boolean based on if the map has that key defined
+
+    containsValue(value)
+        returns boolean based on if the map has the value defined
+
+    ------------------------------------------------------------------------
+
+Looping through a Map:
+
+    can we use for each loop directly with the map
+        no, it does not implement Iterable
+
+        Map<String, Double> map = new HashMap<>();
+
+        for(type : map) <- just this does not work
+
+    keySet(): returns a Set of keys
+
+        then we can iterate through the keys and use those to read the value
+
+        for(String key : map.keySet()){}
+
+    values(): returns all the values of the map
+
+        for(String value : map.values()){}
+
+    entrySet(): returns all the entries of map
+
+        for(Map.Entry<String, Double> entry : map.entrySet()){}
+
+        methods to access information from the entry:
+            getkey()
+            getValue()
+__________________________________________________________________
+
+DB example
+
+        /*
+            Person
+                FIRST_NAME James
+                LAST_NAME Bond
+                AGE 40
+         */
+
+        Map<String, String> person1 = new HashMap<>();
+        person1.put("FIRST_NAME", "James");
+        person1.put("LAST_NAME", "Bond");
+        person1.put("AGE", "40");
+
+        ArrayList<Map<String, String>> allPeople = new ArrayList<>();
+        allPeople.add(person1);
+
+        // I want to know the first name
+        System.out.println(allPeople.get(0).get("FIRST_NAME"));
+
+        /*
+            allPeople -> ArrayList
+            allPeople.get(0) -> First Map object
+            allPeople.get(0).get(FIRST_NAME) -> value of first name
+         */
+
+    Then actual db code:
+
+          List<Map<String,Object>> dataList = new ArrayList<>();
+
+__________________________________________________________________
+
+extra reading challenge:
+    Map<List<Integer>, Set<String>> map;
+    Map with
+        key List<Integer>
+        value Set<String>
+
+================================================================================================
+
+Git Notes
+
+Branch Strategy
+Team Collaboration
+__________________________________________________________________
+
+Git Branching Strategy
+
+master/main
+    develop
+        feature-a
+        feature-b
+
+Flow from our side:
+
+    -> assume you cloned the project/ make sure your project is up to date
+
+    create a new feature branch locally from the develop branch / update your feature branch with up to date develop branch
+
+    create some changes, then we commit and push to your origin feature branch(if its the first time, the feature branch is created on github)
+
+    create a pull request from your feature branch to the develop branch
+
+    someone approves and merges branches
+
+    repeat above steps for as many feature or changes needed, until a stable version of that application or sprint finishes then
+
+        team creates pull request from develop to master
+
+__________________________________________________________________
+
+Strategies
+
+    The strategy of how git is used within a team can vary. It depends on the team workflow
+
+master
+    develop
+        feature
+
+    + multiple versions
+    - can become complex & increase deployment cycles
+
+master
+    feature
+
+    + better for smaller teams
+    + simpler design
+    - only handles one version
+    - more room for bugs. Testing is done on feature branch then merged to master
+
+production
+    release
+        master
+
+    + multiple environments maintained
+    - not all teams/projects will need multiple versions in different environments
+
+Trunk based
+master
+    no other branch. Commit to master
+
+    + allows continuous integration
+    + always ready for release
+    - best used in small experienced teams
+__________________________________________________________________
+
+Team Collaboration
+
+Team Lead or one selected person: (Set up)
+
+    Create a new java project and enable git
+    Create a .gitignore file and add the main folders to ignore
+        files: out, *.iml, .idea
+    Create a package called utils
+    Create a class called MainUtils
+    Commit the .gitignore and MainUtils files
+    Create the remote repository by sharing the project
+    Create a new branch from master called develop on the remote repository (on github)
+    Invite all team members by going to project settings -> manage access
+
+Other Team Members:
+
+    Go to email or GitHub and accept invite to collaborate with the new repository
+    On the remote repository page find the code button and copy the given link
+    Use the given link to clone the project
+
+Now there is a remote repository and everyone has the project locally
+
+--> After cloning open the git log. right click on the origin develop branch and checkout. This will create a local develop branch
+
+Steps to repeat:
+
+    Update local project with changes from other team members
+    In the local repositories create a new branch from the develop branch
+        - for this practice use your name for each personal branch
+    Makes some changes by adding files or updating a file (work in separate files to avoid conflicts)
+    Commit local changes and push to your origin branch (DO NOT PUSH TO DEVELOP OR MASTER BRANCH)
+    On GitHub create a pull request to merge the changes from your branch to the develop branch.
+    Assign a team member to review and approve
+
+            - If you are assigned a pull request view the commits of your team members. Discuss and if there is no problem approve the pull request
+
+            - Pick assignments of who will review your PR ahead of time, and make sure everyone is assigned so everyone in the group is able to practice both parts
+
+Every team member should go through the flow with the team to do some basic practice right now. When projects for automation start you will need to use git on top of the testing you will need to do, so practice the core git now without worrying about the other parts.
+
+Whole group:
+
+    When you feel there is enough commits made to the develop branch make a pull request merge develop into the master branch
+    Everyone should update their projects before making any more changes
+    Repeat all of the above as many times as needed
+__________________________________________________________________

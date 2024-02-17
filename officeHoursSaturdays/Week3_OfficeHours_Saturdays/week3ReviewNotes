@@ -1,0 +1,212 @@
+10/27/2023
+
+Week 3
+Day05 - Operators
+Day06 - If Statements Intro
+Day07 - If Statements Continue
+
+Office Hours will be starting next week. These are optional, for extra practice and review. The material/tasks will be same in both sessions. They will be recorded and uploaded to the LMS
+	when: Thursdays
+		session 1: 11am-2pm EST
+		session 2: 7pm-10pm EST
+
+I will share tasks for these sessions along with the weekly schedule
+__________________________________________________________________
+
+Operators
+	arithmetic
+	unary
+	shorthand
+	relational
+	logical
+Operator precedence
+If statements
+If else statements
+multibranch if
+if statements without brackets
+__________________________________________________________________ come back 3:20 est
+
+Arithmetic Operators
+
+	+ addition
+	- subtraction
+	* multiplication
+	/ division
+	% remainder/modulus
+
+	- When you use arithmetic operators between two different datatypes the result will be the bigger type.
+
+	- When you use datatypes like short or byte and use some arithmetic operators the values are changed to int, so the result of the operation is also int
+
+____________________________________________________________
+
+Shorthand Operators:
+        shortened versions of the arithmetic operators
+
+        +=
+        -=
+        *=
+        /=
+        %=
+____________________________________________________________
+
+Unary Operators
+
+        +       (plus) positive number
+        -       (minus) negative number
+        ++      incrementing, adding 1
+        --      decrementing, subtracting 1
+__________________________________________________________________
+
+Relational Operators
+	statements return a boolean value
+
+        > greater than
+        < less than
+        >= greater than or equal to
+        <= less than or equal to
+        == equals
+        != not equals
+
+        Q: What is the difference between = and ==
+                in java we use = as an assignment operator
+                in java we use == to compare two values, are they equal?
+__________________________________________________________________ come back 10 56 est
+
+Logical Operators
+        evaluates two boolean expressions and returns one resulting boolean value
+
+        AND Logic
+                &&
+                both expressions need to be true for the result to be true
+
+        OR logic
+                ||
+                at least one expressions to be true for the result to be true
+
+        NOT logic
+                !
+                opposite boolean value
+__________________________________________________________________
+
+Operator precedence
+	Execution is from top to bottom and left to right
+
+        ! - (negative) ++ --
+        * / %
+        + -
+        < > <= >=
+        == !=
+        &&
+        ||
+        = += -= *= /= %=
+
+	Use parenthesis to prioritize the operations
+		(5 + 2) * 3 -> 21
+
+__________________________________________________________________
+
+If statements
+
+Control flow statements
+
+    code that allows you to control how your program runs
+
+single if statements
+
+	if (boolean expression) {
+		//code to run if condition is TRUE
+	}
+
+        when the boolean expression is true -> the statements inside of the if block will be executed
+
+        when the boolean expression if false -> nothing will happen, the code will resume execution after the if statement	when we write if statement, else is block is not mandatory.
+
+if else statements
+
+	if(boolean expression) {
+	    //code to run if condition is TRUE
+	} else {
+	    //code to run if condition is FALSE
+	}
+
+        when the boolean expression is true -> the statements inside of the if block will be executed
+
+        when the boolean expression is false -> the statements inside of the else block will be executed
+
+multi branch
+	whenever there is multiple conditions that are related we can use the multi branch if to handle them
+
+	execution for multi branch: the first condition is checked, if it true the first block is executed, otherwise(false) it will check the next condition.
+
+		if(boolean 1){
+			// statements that get executed when the boolean 1 is TRUE
+		} else if(boolean 2) {
+			// statements that get executed when the boolean 2 is TRUE
+		} else if(boolean 3){
+			// statements that get executed when the boolean 3 is TRUE
+		} else {
+			// statements that get executed when all the other boolean conditions were FALSE
+		}
+
+	Note: you can declare as many else if blocks as needed
+	Note: you can add else at the end, it is optional
+	Note: once a condition is true and its code block is executed the other conditions are NOT checked
+	Note: multi branch statements are used to make the code more efficient and more readable
+
+single if vs if else vs multi branch
+
+	single if: checks one condition and if its true run some code
+
+	if else: checks one condition and if is true runs some code, but also has some code to run if its false
+
+	multi branch: checks multiple conditions and define different blocks of code to run whenever one of the conditions is true
+
+__________________________________________________________________
+
+if without brackets
+
+	if statements can be created without brackets, but this limits the if statement
+
+	If without brackets will execute only the next line after it
+
+	Take away: always use brackets
+
+__________________________________________________________________
+
+Nested If statements
+
+    if statement inside of another if statement
+
+    if( 1 ){
+
+        if( 2 ){
+            A
+        } else {
+            B
+        }
+
+    } else {
+
+        if( 3 ){
+            C
+        } else {
+            D
+        }
+
+    }
+
+     1,     2,      3
+    true, true, boolean -> A
+    true, false, boolean -> B
+    false, boolean, true -> C
+    false, boolean, false -> D
+
+    Treat each statement as a separate statement where each boolean condition is checked one at a time
+__________________________________________________________________
+
+Debug: execute your code line by line. It can helpful to fix the function of your code
+
+create a breakpoint by clicking on the left bar near the code line
+run, but select debug instead of normal run
+use step over button to execute lines of code one at a time

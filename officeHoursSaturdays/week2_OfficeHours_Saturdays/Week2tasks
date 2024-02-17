@@ -1,0 +1,68 @@
+Computer [variables, datatypes, printing]
+
+	create a class Computer
+	create a main method
+
+	declare these variables with an a datatype that matches it:
+		brand, processor, ram, storage, price, number of usb slots, has bluetooth, has wifi card
+
+	assign some value to all the variables
+
+	print all the variables
+
+	------------------------------------------------------------
+
+Headphones [variables, datatypes, printing]
+
+	create a class Headphones
+	add a main method
+
+	declare and assign these variables:
+		brand, is wireless, battery level, price, warranty, color, cable length
+
+	print all variables
+
+	------------------------------------------------------------
+
+CellPhone [variables, concatenation]
+
+	Declare and assign the following variables:
+		brand, model, color, price, storage, has camera, sim type (A, B, or C)
+
+	Print out an advertisement post about the phone in this format:
+		-> For extra practice also create this advertisement in a reusable way
+
+		ex: if the given data was this: Apple, IPhone X, Black, 1200.99, 128, true, A
+		the output would be:
+
+		We have an brand new IPhone X from Apple
+		It comes in the color Black and has 128GB memory
+		It has a camera and operates with the "A" type sim
+		Get your very own IPhone X for only $1200.99
+
+		Approaches:
+			multiple print statements
+			concatenate into one String
+
+	------------------------------------------------------------------------
+
+Pizza [variables, operators, concatenation]
+
+	Declare and assign the following variables
+		type (type of pizza), slices (how many slices the pizza has), and people (the number of people eating this pizza)
+
+	Calculate how many slices each person will get and how many are left over. Print the output in this format:
+
+		We ordered a $type pizza with $slices slices. $number_of_people people ate $each_share slices each, so there was $remainder slices left
+
+		Ex: We ordered a cheese pizza with 8 slices. 3 people ate 2 slices each, so there was 2 slices left
+
+	------------------------------------------------------------------------
+
+Tip [variables, operators, concatenation]
+
+	Declare and assign the following variables
+		receipt (list of all the food items), total (amount you owe)
+
+	show the receipt of all the items and total cost of the bill
+	then display 3 tip options and how much they would cost. show the tip for 18%, 21% and 25%

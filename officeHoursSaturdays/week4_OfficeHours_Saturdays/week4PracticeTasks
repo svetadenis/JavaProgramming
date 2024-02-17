@@ -1,0 +1,90 @@
+Practice Tasks
+
+	------------------------------------------------------------------------
+
+Sales Bonus [ternary]
+
+	create a sales amount variable
+	use the sales amount to determine the bonus you get at end of the month
+
+		if your sales amount is less than 10000 you don't get any bonus
+
+		if your sales amount is more than or equal to 10000 and less than 15000 you get a bonus of 5000
+
+		if your sales amount is more than or equal to 15000 you get a bonus of 7000
+
+		print your bonus number
+
+	------------------------------------------------------------------------
+
+Language [switch]
+
+	Declare and assign a language variable
+	Based on the language selected print the related message:
+
+	English: hello, thank for your call
+	Spanish: hola, gracias para llamar
+	Turkish: merhaba, aradiginiz icin tesekkurler
+	Russian: privet, spasibo za vash zvonok
+	French: Merci, pour votre appel
+	Any other input: sorry, $given_language not supported
+
+	------------------------------------------------------------------------
+
+Hotel [scanner, conditional, operators]
+
+	Create a program that will allow you to check into a hotel. When checking in some information will be gathered and used to determine the information about the room and price
+
+	Go through the following flow:
+
+		Welcome to the Java Hotel
+		How many days will you stay
+		-> read number of days from console
+		How many people are in your party
+		-> read number of people from console
+
+	In addition declare these variables:
+		price, room type
+
+	Use the information gathered to assign a room to the guests and print the information
+
+	Data:
+
+		people 1 | single room | price: number of days staying * 100
+		people 2 | double room | price: number of days staying * 125
+		people 3 or 4 | large room | price: number of days staying * number of people * 50
+		people 5 or 6 | suite | price: number of days staying * 1000
+
+		any other number of people is invalid and should output:
+			sorry $number_of_people is not a valid group size
+
+	------------------------------------------------------------------------
+
+Vending Machine [Scanner, conditional statements]
+
+	Define a program that will act like a vending machine. This task will not have many details. I want you to try writing some code with this idea in mind
+	Flow:
+		ask if they want the drink options or snack options
+			if they select the drink option show the menu of water, coffee, soda, energy drink
+			if they select the snack option show the menu of chips, cookies, carrots
+		based in their selection display the price of the item
+
+	------------------------------------------------------------------------
+
+Penny Machine [challenge] [variables, operators, conditional statements, Scanner]
+
+    Create a program that will allow the user to convert their cents(pennies) into dollars, quarters, dimes, & nickles. Note: I am trying to convert my cents into the biggest types possible, like getting change back. Not how many of each I can make
+
+    Pseudocode guide:
+        1) define the total number of cents, these are all pennies at the beginning
+        2) define all the currency types I can use: dollars, quarters, dimes, nickels, and left over pennies
+        3) I will start with the biggest type I can return, which is dollars. I will determine how many cents are in a dollar. Knowing the number of cents in a dollar will allow me to reduce a big amount of the cents into dollars
+        4) after calculating the number of dollars I can make I will find the left over cents that couldn't fit into a dollar
+        5) I will look at the next biggest currency type, which is quarters. I will see how many of my cents can fit into a quarter value
+        6) after calculating the number of quarters I will remove that many cents from my total cents
+        7) I will then repeat those steps for dimes and nickels to check how many of my cents can be represented as dimes and nickels
+        8) any left over cents will be my left over pennies
+        9) display all dollars, quarters, dimes, nickles and pennies I was able to get back from my initial cents amount
+
+    Bonus: make it dynamic with Scanner input. Check that cents are above 0
+    Bonus: only display the currency types that were needed. For example if I had 0 dimes then don't display it in the final result

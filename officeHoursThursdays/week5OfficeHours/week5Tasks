@@ -1,0 +1,100 @@
+Office Hours Topics:
+
+	reviewing week 4:
+	switch
+	ternary
+	Scanner
+
+----------------------------------------------------------------------------------------
+
+T1Parking [ternary]
+
+	create a program that will define a time variable. Use a 24 hour format. Based on the given time determine the cost of parking in the city
+
+		If the time is between 6-12:
+			fee: 7.50
+
+		if the time is between 13 - 23 or 0 - 5
+			fee is 15
+
+		extra: if the time is outside of the valid range (0-24) then output an error message
+----------------------------------------------------------------------------------------
+
+T2Angles [Scanner, ternary]
+
+	create a program that will ask the user to enter 3 angles. Add to sum of the angles and print what type of shape is made from the angles.
+		If the angles add up to 180 print triangle.
+		If the angles add up to 360 print circle
+		For any other angle print: Cannot determine
+
+----------------------------------------------------------------------------------------
+
+T3Habitat [switch, variables, Scanner]
+
+	create a program that will ask the user about a habitat and print the information about the animals that can be found in that habitat
+
+	use the following data and make creative messages for the outputs
+		habitat - animals
+		grasslands - goats, bison, badgers, coyotes
+		jungle	- snakes, tigers, gorillas, rhinos, toucans
+		city	- dogs, cats, gulls, squirrels
+		safari - lion, hippo, giraffe, zebras, elephants
+
+		anything else - invalid habitat. no information available
+
+		Ex:
+			input:
+				jungle
+			output:
+				In the jungle you will be able to find: snakes, tigers, gorillas, rhinos, toucans
+
+----------------------------------------------------------------------------------------
+
+T4HouseMarket [switch, variables]
+
+You are buying a new house and need to collect information about the houses in a specific neighborhood
+
+	create a program that will declare and define the neighborhood name and based on the name return a report of the houses in that area. The report should include this information: the average house price, rating of school districts near by(out of 5), if it is a gated community or not, and if pets are allowed
+
+	print the final report in this format:
+		$the houses in the $neighborhood_name on average value at $average_price. This neighborhood $is_gated_or_not and the rating of the school distracts near by is $school_rating out of 5. For the pet owners you $are_or_not in luck because pets are $allowed_or_not_allowed
+
+		Note: for simple use you can print true or false in the gated and pets parts, but for a challenge try to print the message with as many dynamic parts as possible
+
+	Data to use:
+
+		name - Hills
+		average price - 89,000
+		rating - 4.0
+		gated - no
+		allow pets - yes
+
+		name - Oaks
+		average price - 75,000
+		rating - 3.5
+		gated - no
+		allow pets - yes
+
+		name - Highland
+		average price - 150,000
+		rating - 4.5
+		gated - yes
+		allow pets - no
+
+		name - Canyon
+		average price - 201,000
+		rating - 4.8
+		gated - yes
+		allow pets - yes
+
+----------------------------------------------------------------------------------------
+
+T5Converter [switch, Scanner, variables, operators]
+
+	create a program that can help the user convert between different unit types. Create a menu that will show the options by numbers (ie 1. inches to centimeters), so if the user picks 1 it will be converting from inches to centimeters. After asking for the conversion operation ask the user the value for the base number (in this example inches)
+
+	sample menu:
+		1. inches to centimeters		[formula: inches * 2.54]
+		2. pounds to kilograms			[formula: pounds * 0.454]
+		3. fahrenheit to celsius		[formula: (fahrenheit - 32) / 1.8]
+		4. feet to meters			    [formula: feet * 0.3048]

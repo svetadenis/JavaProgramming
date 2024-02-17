@@ -1,0 +1,96 @@
+11/25/2023
+
+Week 7
+Day16 - Loops Continue
+Day17 - Class & Object Intro
+__________________________________________________________________
+
+do while loop
+nested loop
+class & object
+instance variables & methods
+toString
+this
+__________________________________________________________________
+
+do while loop
+
+    similar to the while loop but the first iteration/execution is always run at least one time and then the boolean value is checked
+
+	    do{
+	        // statements
+	    } while(boolean_expression);
+
+        flow:
+        	statements are executed * for do while the statement run once before checking the boolean
+            boolean expression is checked
+                if the boolean is true: the loop will run the next iteration, run statements. Then the boolean is checked again.
+
+                if the boolean is false: the loop will stop
+_________________________________________________________________
+
+Difference between the loops
+
+	while: used when the number of iterations is not known
+
+	do while: used when the number of iterations is not known, but needs one guaranteed execution
+
+	for loop: used when the number of iterations is known
+__________________________________________________________________
+
+nested loop
+
+	Loop inside of a loop
+
+		- the nested loop can be any loop type, but we commonly use for loop
+			for(int i = 0; i < 5; i++){
+				for(int j=0; j < 2; j++){
+					System.out.println(i + " " + j);
+				}
+			}
+
+			The outer loop ( first loop using the i variable ) will execute for a total of 5 iterations
+
+			The inner loop ( second loop, which inside of the other loop ) will execute for a total of 10.
+				-> for each iteration of the outer loop the inner loop starts from the beginning and executes until the end
+__________________________________________________________________
+
+class & object
+
+	What is a class?
+
+	    a template/blueprint for objects
+	    classes are made in java file
+	    the public classes should match the java file name
+
+	What is an object?
+	    instances of the class, so it has access to the variables/methods
+
+	How to create an object?
+	    ClassName referenceName = new ClassName();
+
+	    instantiation: creating an object
+	        in-stan-shi-ation
+
+	What is an instance variable?
+	    variables defined in a class. There variables belong to each object of the class
+	    Every object has its own set of instance variables and instance methods
+
+	instance methods
+		do not have static in them
+		they are accessed from the object of a class
+__________________________________________________________________
+
+toString
+	this method is called automatically when you print an object
+
+	DONT WORRY ABOUT @OVERRIDE RIGHT NOW - we will learn more about this later
+__________________________________________________________________
+
+this
+	reference to the instance of the class
+
+	this is mainly used to differentiate between local variables and instance variables
+
+Java prioritizes local variables
+    if there is a local variable and an instance variable that have the same name the local variable is the one used

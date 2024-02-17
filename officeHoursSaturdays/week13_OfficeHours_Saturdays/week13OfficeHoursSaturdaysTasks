@@ -1,0 +1,168 @@
+Practice Tasks
+
+	------------------------------------------------------------------------
+
+Exercise [abstract class]
+
+	create an abstract class Exercise
+	create abstract methods: perform() & getCaloriesBurned(int minutes)
+
+	create a class Running
+	inherit the Exercise class and implement the abstract methods
+		for calories method return minutes * 15
+
+	create an abstract class Lifting
+	inherit the Exercise class
+	create abstract method: rackWeight()
+
+	create a class Bench
+	inherit the Lifting class and implement the abstract methods
+		for calories method return minutes * 5
+
+	create a class Gym to test the objects and methods
+
+	------------------------------------------------------------------------
+
+Language [interface]
+
+	create an interface Language
+	create a constant variable: DEFAULT_ENCODING = "UTF-8";
+	create abstract methods: hello() & bye()
+	create a static method: description()
+		print a message about languages: "Languages have the ability to express thoughts and ideas to others using units of sound like words or sentences. There is often rules or syntax for how the words come together"
+
+	create a default method translate()
+		based on the language output how many character the language has:
+
+		2 options:
+			make a switch with some different print statements
+			or
+			use the LanguageCharacters method we created in week 7
+
+	create a class English and implement Language
+	create a class Spanish and implement Language
+		add as many languages as you want
+	test all the methods
+
+	------------------------------------------------------------------------
+
+Movies Part 1 [Abstraction, ArrayList, Objects]
+
+    - Create a final class Movie
+        create the following instance variables:
+            title, rating(out of 5), duration(minutes), year
+
+        create a constructor to initialize all the variables
+
+        encapsulate the class
+
+        create a toString to print the information of the Movie
+
+    - Create an interface PlayMovie
+        create an abstract method: playMovie(Movie) | Movie object as parameter
+
+    - Create a final class Cinema
+        create the following instance variables:
+            location, number of theaters, List of Movies
+
+        create a constructor to initialize all the variables
+
+        implement the PlayMovie & implement the playMovie method to say: "Moving Starting, please grab your popcorn and turn your phones off"
+
+        create a method buyTicket(Movie):
+            print how much a movie ticket is. The cost is based on the rating of the movie. If it is a 5 the movie costs 25, if it is 3 or 4 it cost 20 and any other rating is 15
+
+        create a toString that will display the information about the Cinema and which Movies are available to watch
+
+    - Create an interface HasSubscription
+        create an abstract method subscribe()
+
+    - Create an abstract class StreamingSite
+        implement the PlayMovie & HasSubscription interfaces - don't need to implement the methods
+
+        create the following instance variables:
+            url, subscription amount, movies available(int)
+
+        create a constructor to initialize all the variables
+
+        create an abstract method:
+            pause()
+
+    - Create a final class Netflix
+        inherit the StreamingSite class and implement all the methods
+
+    - Create a final class Amazon
+        inherit the StreamingSite class and implement all the methods
+
+    - Create a final class Hulu
+        inherit the StreamingSite class and implement all the methods
+
+	------------------------------------------------------------------------
+
+GameObject [reading exercise, abstraction, interface focused]
+
+	***** for this task I gave you all the code. You should look through the files and try understanding the structure (don't need to write the code yourself). We will go through the flow and structure together
+
+	take a look at the inheritance from the given image: GameObject Inheritance.png and run the GameTest class to execute the methods and verify the functionality of the objects
+
+	the task is designed with the patterns of real libraries that use abstraction
+
+	you don't need to create all of these from scratch, but if you want to do more practice these are the requirements:
+
+	-----------
+
+    create an interface GameObject
+    create abstract method: instantiate()
+
+    create an interface Character that extends GameObject
+    create abstract methods: move(), attack()
+
+    -----------
+
+    create an interface CanLevel
+    create an abstract method: levelUp()
+
+    create an abstract class PlayerCharacter that implements the Character and CanLevel interfaces
+    create instance variables: name, health
+    create a constructor to initialize all the variables
+    implement the move method
+
+    create a final class Warrior that extends PlayerCharacter
+    implement all abstract methods
+
+        extra: you can make more sub classes: Mage, Archer, etc
+
+    -----------
+
+    create an abstract class Enemy that implements the Character interface
+    implement the move method
+
+    create a final class Zombie that extends Enemy
+    implement all abstract methods
+
+        extra: you can make more sub classes: Spider, Skeleton, etc
+
+    -----------
+
+    create an interface Item that extends GameObject
+    create abstract methods: use()
+
+    create an abstract class Equipment that implements the Item interface
+
+    create a final class Armor that extends Equipment
+    implement all abstract methods
+
+    -----------
+
+    create an interface Consumable()
+    create abstract method: destroy()
+
+    create an abstract class Potion that implements the Item & Consumable interfaces
+    implement the destroy method
+
+    create a final class HealthPotion that extends Equipment
+    implement all abstract methods
+
+        extra: you can make more sub classes: ManaPotion, SpeedPotion
+
+   	------------------------------------------------------------------------
